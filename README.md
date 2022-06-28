@@ -6,4 +6,4 @@ Based on: Windows LTSC 2021 Optimization, Fr33thy. Link: https://www.youtube.com
 
 ## Installation
 
-Just put everything from repository to C drive and run _PostInstall.cmd as a **administrator**
+Just put everything from repository to C drive and run _PostInstall.cmd as a **Administrator**
