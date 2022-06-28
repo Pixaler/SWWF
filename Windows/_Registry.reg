@@ -109,10 +109,6 @@ Windows Registry Editor Version 5.00
 
 
 ; EXPLORER
-;Remove arrow from shortcut
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
-"29"="%windir%\\System32\\shell32.dll,-50"
-
 ;Preventing adding Shortcut
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 "Link"=hex:00,00,00,00
@@ -892,5 +888,26 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "MultiTaskingAltTabFilter"=dword:00000003
 
+;Remove arrow from shortcut
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
+"29"="%windir%\\System32\\shell32.dll,-50"
 
+;Disable UAC
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
+"29"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,74,00,\
+  25,00,5c,00,42,00,6c,00,61,00,6e,00,6b,00,2e,00,69,00,63,00,6f,00,00,00
+
+;Disable tying things
+[HKEY_CURRENT_USER\Control Panel\International\User Profile]
+"ShowAutoCorrection"=dword:00000000
+"ShowTextPrediction"=dword:00000000
+"ShowCasing"=dword:00000000
+"ShowShiftLock"=dword:00000000
+
+;Ctrl+Shift - change layout
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"="2"
+"Hotkey"="2"
