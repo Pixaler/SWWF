@@ -6,7 +6,7 @@ mkdir C:\TEMP
 mkdir C:\!DOWNLOADS
 mkdir C:\!APPS
 mkdir C:\!GAMES
-mkdir !MYCOR
+mkdir C:\!MYCOR
 @echo .
 @echo .
 timeout 2 > NUL /nobreak

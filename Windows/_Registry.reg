@@ -170,6 +170,13 @@ Windows Registry Editor Version 5.00
 
 
 ; PERSONALIZATION
+;Background - solid color: black
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WallPaper"=""
+
+[HKEY_CURRENT_USER\Control Panel\Colors]
+"Background"="0 0 0"
+
 ; Dark theme 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
@@ -864,6 +871,11 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
 "NoLockScreen"=dword:00000001
 
+;Disable lockscreen image
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+"LockScreenImage"=""
+"NoChangingLockScreen"=dword:00000000
+
 ; Disable driver searching
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
 "SearchOrderConfig"=dword:00000000
@@ -888,14 +900,11 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "MultiTaskingAltTabFilter"=dword:00000003
 
-;Remove arrow from shortcut
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
-"29"="%windir%\\System32\\shell32.dll,-50"
-
 ;Disable UAC
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "EnableLUA"=dword:00000000
 
+;Remove arrow from shorcut
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
 "29"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,74,00,\
   25,00,5c,00,42,00,6c,00,61,00,6e,00,6b,00,2e,00,69,00,63,00,6f,00,00,00
@@ -911,3 +920,40 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_CURRENT_USER\Keyboard Layout\Toggle]
 "Language Hotkey"="2"
 "Hotkey"="2"
+
+;Add .tg extension in Windows for portable Telegram (Change directory, if it's diffrent)
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
+"URL Protocol"=""
+@="URL:Telegram Link"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
+@="\"K:\\Telegram\\Telegram.exe,1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+;Russian
+[HKEY_CURRENT_USER\Control Panel\International\User Profile\ru]
+"CachedLanguageName"="@Winlangdb.dll,-1390"
+"0419:00000419"=dword:00000001
+
+;Ukranian
+[HKEY_CURRENT_USER\Control Panel\International\User Profile\uk]
+"CachedLanguageName"="@Winlangdb.dll,-1489"
+"0422:00020422"=dword:00000001
+
+;Add language to switcher
+[HKEY_CURRENT_USER\Keyboard Layout\Preload]
+"1"="00000409"
+"2"="00000419"
+"3"="00000422"
