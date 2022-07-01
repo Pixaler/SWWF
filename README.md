@@ -1,4 +1,4 @@
-# SWWF (Setup for Windows 10 LTSC 1809) 
+# SWWF (Setup Windows wihtout f@#k) 
 
 Script that setup Windows 10 to my personal prefrences
 
