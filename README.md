@@ -1,6 +1,6 @@
 # SWWF (Setup Windows wihtout f@#k) 
 
-Script that setup Windows 10 to my personal prefrences
+Script that setup Windows 10 LTSC to my personal prefrences. Tested on Windows 10 ltsc 1809, 21H2
 
 Main setup take from Izzy Laif "Настраиваю Windows 10 часов". Link: https://www.youtube.com/watch?v=ATJbkPDLOVE&t=3s
 
