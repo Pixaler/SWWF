@@ -13,6 +13,15 @@ timeout 2 > NUL /nobreak
 @echo .
 @echo .
 @echo ---------------------------------------------------------------------------------
+@echo -------------------------------DESKTOP SHORTCUTS----------------------------------
+@echo ---------------------------------------------------------------------------------
+xcopy C:\BATCH\Desktop C:\Users\Pixaler\Desktop 
+@echo .
+@echo .
+timeout 2 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
 @echo -------------------------------EDITING SWAP--------------------------------------
 @echo ---------------------------------------------------------------------------------
 wmic pagefile list /format:list
@@ -79,7 +88,7 @@ timeout 2 > NUL /nobreak
 @echo ---------------------------------------------------------------------------------
 @echo ----------------------------------INSTALLING C++---------------------------------
 @echo ---------------------------------------------------------------------------------
-C:\Windows\_C++.exe /ai
+C:\Windows\_C++.exe /S
 @echo .
 @echo .
 timeout 10 > NUL /nobreak
@@ -109,6 +118,15 @@ timeout 2 > NUL /nobreak
 @echo .
 @echo .
 @echo ---------------------------------------------------------------------------------
+@echo -----------------------------------FIREFOX TO DEFAULT----------------------------
+@echo ---------------------------------------------------------------------------------
+K:\FirefoxPortable\FirefoxPortable2DefaultPrograms.bat
+@echo .
+@echo .
+timeout 10 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
 @echo ----------------------------DISABLING NETWORK DISCOVERY--------------------------
 @echo ---------------------------------------------------------------------------------
 netsh advfirewall firewall set rule group="Network Discovery" new enable=No
@@ -130,4 +148,8 @@ timeout 2 > NUL /nobreak
 @echo .
 timeout 5 > NUL /nobreak
 C:\Windows\System32\shutdown.exe /r /t 0
+del "C:\Windows\_DX"
+del "C:\Windows\_BitsumHighestPerformance.pow"
+del "C:\Windows\_C++.exe"
+del "C:\Windows\_Registry.reg"
 del "C:\_PostInstall.cmd"

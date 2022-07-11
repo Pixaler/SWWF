@@ -10,7 +10,10 @@ Windows Registry Editor Version 5.00
 "Path"="C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
 "ExecutionPolicy"="RemoteSigned"
 
-;REGION AND FORMATS
+
+
+
+; DATA FORMATS
 [HKEY_CURRENT_USER\Control Panel\International]
 "sLongDate"="d MMMM, yyyy"
 "sShortDate"="dd-MMM-yy"
@@ -18,6 +21,9 @@ Windows Registry Editor Version 5.00
 "sTimeFormat"="HH:mm:ss"
 "sShortTime"="HH:mm"
 "iFirstDayOfWeek"="0"
+
+
+
 
 ; TASKBAR
 ; Never combine window
@@ -39,18 +45,6 @@ Windows Registry Editor Version 5.00
 ; People - hide
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People]
 "PeopleBand"=dword:00000000
-
-; Show hidden items
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"Hidden"=dword:00000001
-
-;Show system protected files
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"ShowSuperHidden"=dword:00000001
-
-;Hide empty drives - off
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"HideDrivesWithNoMedia"=dword:00000000
 
 ; Remove search from taskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
@@ -75,6 +69,7 @@ Windows Registry Editor Version 5.00
 ; Show all taskbar icons
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 "EnableAutoTray"=dword:00000000
+
 
 
 
@@ -109,7 +104,38 @@ Windows Registry Editor Version 5.00
 
 
 ; EXPLORER
-;Preventing adding Shortcut
+;Change Windows default folders location
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]
+"Personal"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,44,00,72,00,69,00,\
+  76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,00,4f,00,52,00,00,00
+"{374DE290-123F-4565-9164-39C4925E467B}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+"{F42EE2D3-909F-4907-8871-4C22FC0BF756}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,\
+  00,4f,00,52,00,00,00
+"{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+
+; Remove arrow from shorcut
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
+"29"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,74,00,\
+  25,00,5c,00,42,00,6c,00,61,00,6e,00,6b,00,2e,00,69,00,63,00,6f,00,00,00
+
+; Show system protected files
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSuperHidden"=dword:00000001
+
+; Hide empty drives - off
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"HideDrivesWithNoMedia"=dword:00000000
+
+; Show hidden items
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000001
+
+; Preventing adding Shortcut
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 "Link"=hex:00,00,00,00
 
@@ -117,7 +143,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "LaunchTo"=dword:00000001
 
-;Hide 3D objects, desktop, documents, downloads, music, pictures, videos
+; Hide 3D objects, desktop, documents, downloads, music, pictures, videos
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
@@ -170,7 +196,16 @@ Windows Registry Editor Version 5.00
 
 
 ; PERSONALIZATION
-;Background - solid color: black
+; Disable lockscreen
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+"NoLockScreen"=dword:00000001
+
+;Disable lockscreen image
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+"LockScreenImage"=""
+"NoChangingLockScreen"=dword:00000000
+
+; Background - solid color: black
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "WallPaper"=""
 
@@ -300,37 +335,47 @@ Windows Registry Editor Version 5.00
 "MouseThreshold1"="0"
 "MouseThreshold2"="0"
 
-; Mouse pointers scheme none
-[HKEY_CURRENT_USER\Control Panel\Cursors]
-"AppStarting"=hex(2):00,00
-"Arrow"=hex(2):00,00
-"ContactVisualization"=dword:00000000
-"Crosshair"=hex(2):00,00
-"GestureVisualization"=dword:00000000
-"Hand"=hex(2):00,00
-"Help"=hex(2):00,00
-"IBeam"=hex(2):00,00
-"No"=hex(2):00,00
-"NWPen"=hex(2):00,00
-"Scheme Source"=dword:00000000
-"SizeAll"=hex(2):00,00
-"SizeNESW"=hex(2):00,00
-"SizeNS"=hex(2):00,00
-"SizeNWSE"=hex(2):00,00
-"SizeWE"=hex(2):00,00
-"UpArrow"=hex(2):00,00
-"Wait"=hex(2):00,00
-@=""
 
-; Disable services
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Origin Client Service]
-"Start"=dword:00000004
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Origin Web Helper Service]
-"Start"=dword:00000004
+
+;KEYBOARD
+;Disable tying things
+[HKEY_CURRENT_USER\Control Panel\International\User Profile]
+"ShowAutoCorrection"=dword:00000000
+"ShowTextPrediction"=dword:00000000
+"ShowCasing"=dword:00000000
+"ShowShiftLock"=dword:00000000
+
+;Ctrl+Shift - change layout
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"="2"
+"Hotkey"="2"
+
+;Russian
+[HKEY_CURRENT_USER\Control Panel\International\User Profile\ru]
+"CachedLanguageName"="@Winlangdb.dll,-1390"
+"0419:00000419"=dword:00000001
+
+;Ukranian
+[HKEY_CURRENT_USER\Control Panel\International\User Profile\uk]
+"CachedLanguageName"="@Winlangdb.dll,-1489"
+"0422:00020422"=dword:00000001
+
+;Add language to switcher
+[HKEY_CURRENT_USER\Keyboard Layout\Preload]
+"1"="00000409"
+"2"="00000419"
+"3"="00000422"
+
+;Enable NumLock
+[HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="2"
+
+
+
 
 ; POWER SETTINGS
-;Screensaver settings
+; Screensaver settings
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "SCRNSAVE.EXE"="C:\\Windows\\system32\\scrnsave.scr"
 "ScreenSaveTimeOut"="1140"
@@ -376,6 +421,38 @@ Windows Registry Editor Version 5.00
 
 
 ; ADVANCED SYSTEM SETTINGS
+;Set custom enviroment variable for user
+[HKEY_CURRENT_USER\Environment]
+"Path"=hex(2):25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,4c,\
+  00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,4c,00,\
+  6f,00,63,00,61,00,6c,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,66,\
+  00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,41,00,70,00,70,00,\
+  73,00,3b,00,43,00,3a,00,5c,00,42,00,41,00,54,00,43,00,48,00,3b,00,00,00
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+;Set custom enviroment variable for system
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"Path"=hex(2):43,00,3a,00,5c,00,21,00,41,00,50,00,50,00,53,00,5c,00,56,00,4d,\
+  00,77,00,61,00,72,00,65,00,5c,00,62,00,69,00,6e,00,5c,00,3b,00,25,00,53,00,\
+  79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,\
+  00,73,00,74,00,65,00,6d,00,33,00,32,00,3b,00,25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,3b,00,25,00,53,00,79,00,73,00,74,\
+  00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,33,00,32,00,5c,00,57,00,62,00,65,00,6d,00,3b,00,25,00,53,00,59,\
+  00,53,00,54,00,45,00,4d,00,52,00,4f,00,4f,00,54,00,25,00,5c,00,53,00,79,00,\
+  73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,\
+  00,73,00,50,00,6f,00,77,00,65,00,72,00,53,00,68,00,65,00,6c,00,6c,00,5c,00,\
+  76,00,31,00,2e,00,30,00,5c,00,3b,00,25,00,53,00,59,00,53,00,54,00,45,00,4d,\
+  00,52,00,4f,00,4f,00,54,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,\
+  33,00,32,00,5c,00,4f,00,70,00,65,00,6e,00,53,00,53,00,48,00,5c,00,3b,00,43,\
+  00,3a,00,5c,00,42,00,41,00,54,00,43,00,48,00,3b,00,00,00
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+
+; Disable retore point
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
+"DisableSR"=dword:00000001
+
 ; Set appearance options to custom
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
 "VisualFXSetting"=dword:3
@@ -434,6 +511,23 @@ Windows Registry Editor Version 5.00
 ; Disable remote assistance
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
 "fAllowToGetHelp"=dword:00000000
+
+;Disable cache thumbnail
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoThumbnailCache"=dword:00000001
+"DisableThumbnailCache"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoThumbnailCache"=-
+"DisableThumbnailCache"=-
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableThumbnailCache"=-
+"NoThumbnailCache"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableThumbnailCache"=-
+"NoThumbnailCache"=-
 
 
 
@@ -727,6 +821,7 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 
 
+
 ; EASE OF ACCESS
 ; Disable narrator
 [HKEY_CURRENT_USER\Software\Microsoft\Narrator\NoRoam]
@@ -779,11 +874,8 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 
 
-; OTHER
-;Disable retore point
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
-"DisableSR"=dword:00000001
 
+; WINDOWS DEFENDER
 ; Disable Windows Firewall
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile]
 "EnableFirewall"=dword:00000000
@@ -801,58 +893,44 @@ E0,F6,C5,D5,0E,CA,50,00,00
 "Windows Defender"=-
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
 "Windows Defender"=-
-;Disable auto-update
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
-"NoAutoUpdate"=dword:00000001
 
-;Turn off Windows Defender notifications
+
+; Turn off Windows Defender notifications
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications]
 "DisableNotifications"=dword:00000001
 
-;Set custom enviroment variable for user
-[HKEY_CURRENT_USER\Environment]
-"Path"=hex(2):25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,4c,\
-  00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,4c,00,\
-  6f,00,63,00,61,00,6c,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,66,\
-  00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,41,00,70,00,70,00,\
-  73,00,3b,00,43,00,3a,00,5c,00,42,00,41,00,54,00,43,00,48,00,3b,00,00,00
-"TEMP"="C:\\TEMP"
-"TMP"="C:\\TEMP"
-;Set custom enviroment variable for system
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
-"Path"=hex(2):43,00,3a,00,5c,00,21,00,41,00,50,00,50,00,53,00,5c,00,56,00,4d,\
-  00,77,00,61,00,72,00,65,00,5c,00,62,00,69,00,6e,00,5c,00,3b,00,25,00,53,00,\
-  79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,\
-  00,73,00,74,00,65,00,6d,00,33,00,32,00,3b,00,25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,3b,00,25,00,53,00,79,00,73,00,74,\
-  00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,33,00,32,00,5c,00,57,00,62,00,65,00,6d,00,3b,00,25,00,53,00,59,\
-  00,53,00,54,00,45,00,4d,00,52,00,4f,00,4f,00,54,00,25,00,5c,00,53,00,79,00,\
-  73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,\
-  00,73,00,50,00,6f,00,77,00,65,00,72,00,53,00,68,00,65,00,6c,00,6c,00,5c,00,\
-  76,00,31,00,2e,00,30,00,5c,00,3b,00,25,00,53,00,59,00,53,00,54,00,45,00,4d,\
-  00,52,00,4f,00,4f,00,54,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,\
-  33,00,32,00,5c,00,4f,00,70,00,65,00,6e,00,53,00,53,00,48,00,5c,00,3b,00,43,\
-  00,3a,00,5c,00,42,00,41,00,54,00,43,00,48,00,3b,00,00,00
-"TEMP"="C:\\TEMP"
-"TMP"="C:\\TEMP"
 
-;Disable cache thumbnail
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-"NoThumbnailCache"=dword:00000001
-"DisableThumbnailCache"=-
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
-"NoThumbnailCache"=-
-"DisableThumbnailCache"=-
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"DisableThumbnailCache"=-
-"NoThumbnailCache"=-
+; PROGRAMS SETTINGS
+; Add .tg extension in Windows for portable Telegram (Change directory, if it's diffrent)
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"DisableThumbnailCache"=-
-"NoThumbnailCache"=-
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
+"URL Protocol"=""
+@="URL:Telegram Link"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
+@="\"K:\\Telegram\\Telegram.exe,1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+
+
+
+; OTHER
+; Disable auto-update
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
 
 ;Disable "Open file security warning"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
@@ -866,15 +944,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Associations]
 "LowRiskFileTypes"=-
-
-; Disable lockscreen
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
-"NoLockScreen"=dword:00000001
-
-;Disable lockscreen image
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
-"LockScreenImage"=""
-"NoChangingLockScreen"=dword:00000000
 
 ; Disable driver searching
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
@@ -900,79 +969,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "MultiTaskingAltTabFilter"=dword:00000003
 
-;Disable UAC
+; Disable UAC
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "EnableLUA"=dword:00000000
-
-;Remove arrow from shorcut
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
-"29"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,74,00,\
-  25,00,5c,00,42,00,6c,00,61,00,6e,00,6b,00,2e,00,69,00,63,00,6f,00,00,00
-
-;Disable tying things
-[HKEY_CURRENT_USER\Control Panel\International\User Profile]
-"ShowAutoCorrection"=dword:00000000
-"ShowTextPrediction"=dword:00000000
-"ShowCasing"=dword:00000000
-"ShowShiftLock"=dword:00000000
-
-;Ctrl+Shift - change layout
-[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
-"Language Hotkey"="2"
-"Hotkey"="2"
-
-;Add .tg extension in Windows for portable Telegram (Change directory, if it's diffrent)
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
-"URL Protocol"=""
-@="URL:Telegram Link"
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
-@="\"K:\\Telegram\\Telegram.exe,1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
-
-;Russian
-[HKEY_CURRENT_USER\Control Panel\International\User Profile\ru]
-"CachedLanguageName"="@Winlangdb.dll,-1390"
-"0419:00000419"=dword:00000001
-
-;Ukranian
-[HKEY_CURRENT_USER\Control Panel\International\User Profile\uk]
-"CachedLanguageName"="@Winlangdb.dll,-1489"
-"0422:00020422"=dword:00000001
-
-;Add language to switcher
-[HKEY_CURRENT_USER\Keyboard Layout\Preload]
-"1"="00000409"
-"2"="00000419"
-"3"="00000422"
-
-;Enable NumLock
-[HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
-"InitialKeyboardIndicators"="2"
-
-
-;Change Windows default folders location
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]
-"Personal"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,44,00,72,00,69,00,\
-  76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,00,4f,00,52,00,00,00
-"{374DE290-123F-4565-9164-39C4925E467B}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
-  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
-"{F42EE2D3-909F-4907-8871-4C22FC0BF756}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,\
-  00,4f,00,52,00,00,00
-"{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
-  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
