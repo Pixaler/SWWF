@@ -1,0 +1,22 @@
+1. Mount K disk
+2. Run script
+3. OpenShell
+	- Skin - Midnight
+	- Search: Recent - Off, Max document - 0
+4. FirefoxPortable - add it to Windows default program 
+5. WinRAR
+	- Use for removable disks - off
+	- Restore last working folder on startup - off
+	- Compression method - Best
+6. Set for every type of file portable program
+7. Delete temp files
+8. Startup Apps
+9. Display driver
+	- Boot safe mode
+	- Restart
+	- DDU
+	- Boot normal
+	- Install driver
+10. AMD settings setup - import r520set.zip
+11. Resolution and refresh rate
+12. Powerplan setup
