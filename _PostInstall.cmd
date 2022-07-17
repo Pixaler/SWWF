@@ -13,7 +13,7 @@ timeout 2 > NUL /nobreak
 @echo .
 @echo .
 @echo ---------------------------------------------------------------------------------
-@echo -------------------------------DESKTOP SHORTCUTS----------------------------------
+@echo -------------------------------DESKTOP SHORTCUTS---------------------------------
 @echo ---------------------------------------------------------------------------------
 xcopy C:\BATCH\Desktop C:\Users\Pixaler\Desktop 
 @echo .
@@ -53,6 +53,16 @@ reg add "HKLM\SOFTWARE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v S
 reg add "HKLM\SOFTWARE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v DontReportInfectionInformation /t REG_DWORD /d 1 /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\Sense" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\SecurityHealthService" /f
+@echo .
+@echo .
+timeout 2 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
+@echo -------------------------------REMOVE EDGE---------------------------------------
+@echo ---------------------------------------------------------------------------------
+cd %PROGRAMFILES(X86)%\Microsoft\Edge\Application\9*\Installer
+setup --uninstall --force-uninstall --system-level
 @echo .
 @echo .
 timeout 2 > NUL /nobreak
@@ -147,9 +157,9 @@ timeout 2 > NUL /nobreak
 @echo .
 @echo .
 timeout 5 > NUL /nobreak
-C:\Windows\System32\shutdown.exe /r /t 0
 del "C:\Windows\_DX"
 del "C:\Windows\_BitsumHighestPerformance.pow"
 del "C:\Windows\_C++.exe"
 del "C:\Windows\_Registry.reg"
 del "C:\_PostInstall.cmd"
+shutdown -r -t 0
