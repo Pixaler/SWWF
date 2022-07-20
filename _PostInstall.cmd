@@ -61,11 +61,28 @@ timeout 2 > NUL /nobreak
 @echo ---------------------------------------------------------------------------------
 @echo -------------------------------REMOVE EDGE---------------------------------------
 @echo ---------------------------------------------------------------------------------
-cd %PROGRAMFILES(X86)%\Microsoft\Edge\Application\9*\Installer
-setup --uninstall --force-uninstall --system-level
+C:\%PROGRAMFILES(X86)%\Microsoft\Edge\Application\9*\Installer\setup.exe --uninstall --force-uninstall --system-level
 @echo .
 @echo .
 timeout 2 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
+@echo -------------------------------GOODBYE DPI---------------------------------------
+@echo ---------------------------------------------------------------------------------
+C:\PortableApps\goodbyedpi\service_install_any_dnsredir.cmd
+@echo .
+@echo .
+timeout 2 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
+@echo -------------------------------SETUP SPOTIFY-------------------------------------
+@echo ---------------------------------------------------------------------------------
+C:\PortableApps\Spotify\start.bat
+@echo .
+@echo .
+timeout 10 > NUL /nobreak
 @echo .
 @echo .
 @echo ---------------------------------------------------------------------------------
@@ -146,6 +163,17 @@ netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=
 timeout 2 > NUL /nobreak
 @echo .
 @echo .
+@echo .
+@echo .
+timeout 2 > NUL /nobreak
+@echo .
+@echo .
+@echo ---------------------------------------------------------------------------------
+@echo -------------------------------CLEAR TEMP FOLDERS--------------------------------
+@echo ---------------------------------------------------------------------------------
+del /q/f/s C:\Windows\Temp\*
+del /q/f/s C:\Users\%USERNAME%\AppData\Local\Temp\*
+del /q/f/s %TEMP%\*
 @echo .
 @echo .
 timeout 2 > NUL /nobreak
