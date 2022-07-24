@@ -1,4 +1,4 @@
-# SWWF (Setup Windows wihtout f@#k) 
+# SWWF (Setup Windows without f@#k) 
 
 Script that setup Windows 10 to my personal prefrences. Tested on Windows 10 LTSC 1809, Windows 10 LTSC 21H2, Windows 10 Pro 21H2, Windows 11 Pro 21H2
 
