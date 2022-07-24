@@ -888,18 +888,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile]
 "EnableFirewall"=dword:00000000
 
-;Remove Windows Defender
-[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\EPP]
-[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\EPP]
-[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\EPP]
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
-"DisableAntiSpyware"=dword:00000001
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
-"Windows Defender"=-
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
-"Windows Defender"=-
-
-
 ; Turn off Windows Defender notifications
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications]
 "DisableNotifications"=dword:00000001
@@ -936,10 +924,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 ; Disable Microsoft Store auto update
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsStore]
 "AutoDownload"=dword:00000002
-
-; Disable auto-update
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
-"NoAutoUpdate"=dword:00000001
 
 ;Disable "Open file security warning"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]

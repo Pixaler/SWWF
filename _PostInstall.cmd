@@ -42,26 +42,9 @@ timeout 2 > NUL /nobreak
 @echo .
 @echo .
 @echo ---------------------------------------------------------------------------------
-@echo -------------------------------REMOVE WINDOWS DEFENDER---------------------------
+@echo -------------------------------REMOVE EDGE W11-----------------------------------
 @echo ---------------------------------------------------------------------------------
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v SmartScreenEnabled /t REG_SZ /d "Off" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "EnableWebContentEvaluation" /t "REG_DWORD" /d "0" /f
-reg add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter" /v "EnabledV9" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
-reg add "HKLM\SOFTWARE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v SpyNetReporting /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v SubmitSamplesConsent /t REG_DWORD /d 2 /f
-reg add "HKLM\SOFTWARE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v DontReportInfectionInformation /t REG_DWORD /d 1 /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\Sense" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\SecurityHealthService" /f
-@echo .
-@echo .
-timeout 2 > NUL /nobreak
-@echo .
-@echo .
-@echo ---------------------------------------------------------------------------------
-@echo -------------------------------REMOVE EDGE---------------------------------------
-@echo ---------------------------------------------------------------------------------
-C:\%PROGRAMFILES(X86)%\Microsoft\Edge\Application\9*\Installer\setup.exe --uninstall --force-uninstall --system-level
+C:\%PROGRAMFILES(X86)%\Microsoft\Edge\Application\10*\Installer\setup.exe --uninstall --force-uninstall --system-level
 @echo .
 @echo .
 timeout 2 > NUL /nobreak
