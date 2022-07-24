@@ -1,0 +1,230 @@
+1. Disable internet (at first boot)
+2. Instaling original driver
+3. Extract !BACKUP.rar (if you have :)
+5. Reboot system
+6. Update system and apps in Windows Store
+7. Reboot system
+7. Delete driver download dir in C:\ (AMD, Intell,Dell)
+8. Mount K disk
+9. Run script
+10. Install apps
+	- SimpleNote
+	- SumatraPDF
+	- WinDjViewPortable
+	- 7-Zip
+	- Far Manager
+	- Autoruns 
+	- Dism++ 
+	- MSI Afterburner and RivaTuner (install and put in your portable folder)
+	- ProcessHacker
+	- Rufus
+	- winrar (install and put in your portabke folder)
+	- Spotify (install, spicey up, put to portable folders)
+	- VeraCrypt (create encrypted volume if its needed)
+	- FirefoxPortable
+	- foobar2000
+	- FreeDownloadManager
+	- goodbyeDPI
+	- OpenVPN
+	- Psiphon
+	- qBittorrent
+	- ThunderBird
+	- Telegram
+	- XnViewMP
+	- PotPlayer
+	- Git
+	- VSCode
+	- zulu17 java
+	- npp
+11. SimpleNote
+	- Create shorcut
+	- Delete help.html
+	- Login
+12. SumatraPDF
+	- Create shorcut
+	- Delete help.html
+13. WinDjViewPortable
+	- Create shorcut
+	- Delete help.html
+14. 7-Zip
+	- Create shorcut
+	- Delete help.html
+15. Far Manager
+	- Create shortcut - BIOS
+		* Lauch keu c:\ d:\
+		* Shortcut key: Ctrl+Alt+F
+		* Screen Buffer Size Height 30
+		* Run as administrator
+	- Far.exe.example.ini rename to Far.exe.ine. Open and uncomment UseSystemProfiles=0
+	- System settings
+		Save commands history - off
+		Save folders history - off
+		Save view and edit history - off
+	- Panel settings - Show free size - on
+	- Panel.Del.lua from Far\Addons\Macros\ to Far\Profile\Macros\scripts
+	- Save file position - off
+16. Autoruns 
+	- Create shortcut, run as administrator
+	- Check startup apps
+17. Dism++ 
+	- Create shortcut, run as administrator
+18. MSI Afterburner
+	- Create shortcut
+	- Setup monitoring
+19. RivaTuner
+	- Launch and close
+20. ProcessHacker
+	- Create shortcut, run as administrator
+		* Shrotcut key Ctrl+Alt+P
+21. Rufus
+	- Create shortcut
+22. WinRAR
+	- Create shortcut
+	- Use for removable disks - off
+	- Restore last working folder on startup - off
+	- Compression method - Best
+23. Spotify
+	- Disable auto update
+	- Create shortcut of Spotify.exe
+	- start.bat
+	- Remove from startup
+	- Login
+	- Exit
+24. FirefoxPortable
+	- Run FirefoxPortable2DefaultPrograms.bat. Then add it to Windows default program
+	- Delete help.html
+	- Create shortcut	- Change ico from BATCH folder (take ico from FirefoxPortable\App\AppInfo\appicon.ico)
+	- Customize toolbar
+	- Disable tabs. Put in Data\profile\chrome file userChrome.css 
+	- Dark theme
+	- Download directory - !DOWNLOADS
+	- about:configs
+		toolkit.legacyUserProfileCustomizations.stylesheets;true
+		browser.sessionstore.resume_from_crash;false
+		dom.webnotifications.enabled;false
+		extensions.blocklist.enabled;false
+		security.insecure_field_warning.contextual.enabled;false
+		browser.zoom.siteSpecific;false
+		browser.sessionstore.interval;150000000
+		browser.tabs.opentabfor.middleclick;false
+		middlemouse.openNewWindow;true
+	- Settings
+		* General - Open links in tabs instead of new windows - Uncheck
+		* Home - Shortcut - Uncheck
+		* Privacy and security - Ask to save logins and passwords for websites - Uncheck
+	- Add-ons
+		* uBlock
+		* HTTPS Everywhere
+		* I don't care about cookies
+		* Enhancer for YouTube - Automatically expand the video player, 
+					     - Use the available space based on the viewport dimensions to expand the video player 
+					     - Automatically select a playback quality - 1080p
+25. FreeDownloadManager	
+	- Create shortcut
+	- Delete help.html
+26. goodbyeDPI
+	- service_install_any_dnsredir.bat run
+27. OpenVPN
+	- Create shortcut
+	- Install TAP driver
+28. Psiphon
+	- Create shortcut
+29. qBittorrent
+	- Create shortcut
+	- Delete help.html
+30. Thunderbird
+	- Create shortcut - Change ico from BATCH folder (take ico from ThunderbirdPortable\App\AppInfo\appicon.ico)
+	- Delete help.html
+	- Setup mail accounts
+31. Telegram
+	- Create shortcut
+	- Change icons
+	- Pass initial setup
+	- Chat settings - Night
+	- Clear files older than 1 week
+32. XnViewMP
+	- Create shortcut
+	- First setup - set saving all in program folders, Dark theme
+33. PotPlayer
+	- Create shortcut
+	- Delete help.html
+34. Env variable (PATH)
+	- C:\PortableApps\zulu17\bin
+	- C:\PortableApps\VSCode\bin
+	- C:\PortableApps\Git\bin
+35. VSCode
+	- Initial setup
+	- Create data folder
+		* git config --global user.name "Pixaler"     
+		* git config --global user.email "gnidko02@gmail.com"    
+	- Clone necessary repo
+36. foobar2000
+	- Skin https://github.com/Ottodix/Eole-foobar-theme#participate-to-the-theme
+	- Add media library
+	- Sort - library tree
+	- Group - %album%
+	- Install ASIO component and select ASIO output
+37. Startup Apps
+38. Pin BATCH, PortableApps, !APPS folders in quick access
+39. Set for every type of file portable program
+40. Sounds
+	- Disable unnecessary devices
+	- Change output devices
+	- Disable audio enhancements in/out device
+	- In Waves disable all
+41. Apps
+	- Uninstall apps
+		* AMD Radeon software shortcut
+		* Microsoft News
+		* Feedback Hub
+		* Media Player
+		* Mail and Calendar
+		* Microsoft OneDrive
+		* Microsoft Teams
+		* Microsoft To Do
+		* Movies & TV
+		* Office
+		* OneNote for Windows 1
+		* Solitaire Collection
+		* Sticky Notes
+		* Tips
+		* Voice Recorder
+		* Weather
+		* Xbox 
+42. Display
+	- Night light
+	- Extend these displays
+	- 100% scaling
+	- Change main display
+43. Taskbar
+	- StartAllBack
+		* Never combine
+	- Shortcut truecrypt.bat
+	- Pin icon
+	- Disable lockscreen background picture
+	- Multiple displays
+		* Taskbar where windows is open
+	- Put shorcut in menu
+44. Bluetooth - turn off
+45. Check restore point
+46. AMD settings setup - export radeon520set
+47. Powerplan setup. Switchable Dynamic Graphics - Maximize performance
+48. Device manager. Disable power saving in wireless, ethernet, USB
+49. Install Office: Word, Excel, PowerPoint, VisioPro
+	#For all apps
+	- Never change the document page color
+	- Advannced
+		* Measurements - Centimeters
+	- Create shortcuts
+50. Microsoft Store
+	- Video autoplay - off
+51. Notepad++
+	- Dark mode
+52. Delete temp files
+53. Clean manager
+54. Audacity
+55. OBS
+56. Backup !MOE, BATCH and PortableApps
+57. Upload backup on cloud
+56. Reboot
+57. Your Perfect !!!
