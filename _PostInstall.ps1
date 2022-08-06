@@ -182,5 +182,8 @@ Remove-Item C:\Windows\_DX -Recurse
 Remove-Item C:\Windows\_BitsumHighestPerformance.pow
 Remove-Item C:\Windows\_C++.exe
 Remove-Item C:\Windows\_Registry.reg
-Stop-Computer -ComputerName localhost 
 Remove-Item C:\_PostInstall.cmd
+Remove-Item C:\_DebloatScript.ps1
+Remove-Item C:\_AppSetup.ps1
+Stop-Computer -ComputerName localhost 
+Remove-Item C:\_PostInstall.ps1
