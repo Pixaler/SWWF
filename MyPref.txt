@@ -1,22 +1,42 @@
-1. Mount K disk
-2. Run script
-3. OpenShell
-	- Skin - Midnight
-	- Search: Recent - Off, Max document - 0
-4. FirefoxPortable - add it to Windows default program 
-5. WinRAR
+1. Instaling original driver
+2. Extract !BACKUP.zip
+3. Reboot system
+4. Mount K disk. Add to SWWF
+5. Copy script to C:\
+6. Run script
+7. Microsoft Store - Update apps
+8. Windows Update - Receive update for other Microsoft product
+9. Update system
+10. Reboot system
+11. Delete driver download dir in C:\ (AMD, Intell,Dell)
+12. WinRAR
 	- Use for removable disks - off
 	- Restore last working folder on startup - off
 	- Compression method - Best
-6. Set for every type of file portable program
-7. Delete temp files
-8. Startup Apps
-9. Display driver
-	- Boot safe mode
-	- Restart
-	- DDU
-	- Boot normal
-	- Install driver
-10. AMD settings setup - import r520set.zip
-11. Resolution and refresh rate
-12. Powerplan setup
+13. Pin BATCH, PortableApps, !APPS, !PROJECTS folders in quick access
+14. Set for every type of file portable program. Try add to powershell script
+15. Sounds
+	- Disable unnecessary devices
+	- Change output devices
+	- Disable audio enhancements in/out device
+	- In Waves disable all
+16. Display
+	- Extend these displays
+	- Change main display
+17. Taskbar * For Windows 11 install StartAllBack
+	- Pin icon
+	- Disable lockscreen background picture
+18. Bluetooth - turn off 
+19. Check restore point
+20. AMD settings setup - import r520set.zip
+21. Powerplan setup. Switchable Dynamic Graphics - Maximize performance. Maybe it may change in reg.
+22. Device manager. Disable power saving in wireless, ethernet, USB
+23. VSCode
+	- Setup Git in git-bash.exe
+		* git config --global user.name "Pixaler"     
+		* git config --global user.email "gnidko02@gmail.com"    
+24. Startup Apps in Autoruns
+25. Delete temp files
+26. Clean manager
+27. Reboot
+28. Your Perfect !!!
