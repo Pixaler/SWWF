@@ -25,3 +25,7 @@
 6. Execution police for powershell now applied in cmd file
 7. _AppSetup and _DeblaotScript now launch
 8. Now script wait until C++ and DX to be installed
+
+# v0.7.2
+## Changes
+1. _DebloatScript. Add XboxLive to uninstall
