@@ -16,7 +16,7 @@ Write-Host .
 Start-Sleep -Seconds 10
 Write-Host .
 Write-Host .
-<# Write-Host ---------------------------------------------------------------------------------
+Write-Host ---------------------------------------------------------------------------------
 Write-Host -----------------------------------FIREFOX TO DEFAULT----------------------------
 Write-Host ---------------------------------------------------------------------------------
 K:\FirefoxPortable\FirefoxPortable2DefaultPrograms.bat
@@ -24,5 +24,5 @@ Write-Host .
 Write-Host .
 Start-Sleep -Seconds 10
 Write-Host .
-Write-Host . #> 
+Write-Host .
 Exit

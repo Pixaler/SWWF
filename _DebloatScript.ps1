@@ -29,14 +29,11 @@ Get-AppxPackage -allusers MicrosoftTeams | Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftWindows.Client.WebExperience | Remove-AppxPackage
 Get-AppxPackage -allusers SpotifyAB.SpotifyMusic | Remove-AppxPackage
 Get-AppxPackage -allusers microsoft.windowscommunicationsapps | Remove-AppxPackage
+Get-AppxPackage -allusers *xboxapp*| Remove-AppxPackage
+Get-AppxPackage -allusers MicrosoftTeams* | Remove-AppxPackage
 C:\Windows\SysWOW64\OneDriveSetup.exe -uninstall
-$winver = systeminfo | findstr /B /C:"OS Name"
-if ($winver -match 'Windows 10' -eq $true) {
-    C:\%PROGRAMFILES(X86)%\Microsoft\Edge\Application\9*\Installer\setup.exe --uninstall --force-uninstall --system-level # Windows 10 Microsoft Edge
-}
-if ($winver -match 'Windows 11' -eq $true) {
-    C:\%PROGRAMFILES(X86)%\Microsoft\Edge\Application\10*\Installer\setup.exe --uninstall --force-uninstall --system-level # Windows 11 Microsoft Edge
-}
+Set-Location -Path "C:\Program Files (x86)\Microsoft\Edge\Application\9*\Installer" 
+./setup.exe --uninstall --force-uninstall --system-level
 Get-WindowsPackage -Online | Where PackageName -like *Hello-Face* | Remove-WindowsPackage -Online -NoRestart
 Get-WindowsPackage -Online | Where PackageName -like *QuickAssist* | Remove-WindowsPackage -Online -NoRestart
 Exit

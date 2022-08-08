@@ -14,12 +14,8 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host --------------------------EDIT ENVIROMENTAL VARIABLES----------------------------
 Write-Host ---------------------------------------------------------------------------------
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\BATCH", [System.EnvironmentVariableTarget]::User)
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\PortableApps\VSCode\bin", [System.EnvironmentVariableTarget]::User)
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\PortableApps\Git\bin", [System.EnvironmentVariableTarget]::User)
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\BATCH",  [System.EnvironmentVariableTarget]::Machine)
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\PortableApps\VSCode\bin", [System.EnvironmentVariableTarget]::Machine)
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\PortableApps\Git\bin", [System.EnvironmentVariableTarget]::Machine)
+[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin", [System.EnvironmentVariableTarget]::User)
+[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin",  [System.EnvironmentVariableTarget]::Machine)
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -28,7 +24,7 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------------DESKTOP SHORTCUTS---------------------------------
 Write-Host ---------------------------------------------------------------------------------
-Copy-Item -Path "C:\BATCH\Desktop\*" -Destination "C:\Users\Pixaler\Desktop " -Recurse
+Copy-Item -Path "C:\BATCH\Desktop\*" -Destination "C:\Users\$env:USERNAME\Desktop" -Recurse
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -65,9 +61,9 @@ Write-Host -----------------------------INSTALLING POWER PLAN-------------------
 Write-Host ---------------------------------------------------------------------------------
 powercfg -import "C:\Windows\_BitsumHighestPerformance.pow" 77777777-7777-7777-7777-777777777777
 powercfg -SETACTIVE "77777777-7777-7777-7777-777777777777"
-powercfg -Remove-Itemete 381b4222-f694-41f0-9685-ff5bb260df2e
-powercfg -Remove-Itemete 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 
-powercfg -Remove-Itemete a1841308-3541-4fab-bc81-f71556f20b4a
+powercfg -delete 381b4222-f694-41f0-9685-ff5bb260df2e
+powercfg -delete 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c 
+powercfg -delete a1841308-3541-4fab-bc81-f71556f20b4a
 powercfg -attributes SUB_PROCESSOR 75b0ae3f-bce0-45a7-8c89-c9611c25e100 -ATTRIB_HIDE
 powercfg -setdcvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e100 3000
 powercfg -setacvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e100 3000
@@ -90,10 +86,10 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------------UNINSTALL BLOAT-----------------------------------
 Write-Host ---------------------------------------------------------------------------------
-Write-Host Uninstall bloat? (y/n)
+Write-Host "Uninstall bloat? (y/n)"
 $uninstall_bloat = Read-Host -Prompt "You options is"
 if ($uninstall_bloat  -like 'y') {
-    .\_AppSetup.ps1
+    C:\_DebloatScript.ps1
 }
 if ($uninstall_bloat  -like 'n') {
     Start-Sleep -Seconds 1
@@ -104,10 +100,10 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------------SETUP MY APPS-------------------------------------
 Write-Host ---------------------------------------------------------------------------------
-Write-Host Setup my apps? (y/n)
+Write-Host "Setup my apps? (y/n)"
 $setup_my_apps = Read-Host -Prompt "You options is"
 if ($setup_my_apps -like 'y') {
-    .\_AppSetup.ps1
+    C:\_AppSetup.ps1
 }
 if ($setup_my_apps -like 'n') {
     Start-Sleep -Seconds 1
@@ -121,9 +117,9 @@ Write-Host ---------------------------------------------------------------------
 Write-Host ----------------------------------INSTALLING C++---------------------------------
 Write-Host ---------------------------------------------------------------------------------
 C:\Windows\_C++.exe /S
+Wait-Process _C++
 Write-Host .
 Write-Host .
-Start-Sleep -Seconds 10
 Write-Host .
 Write-Host .
 Write-Host .
@@ -135,6 +131,7 @@ Write-Host ---------------------------------------------------------------------
 Write-Host -----------------------------------INSTALLING DX---------------------------------
 Write-Host ---------------------------------------------------------------------------------
 C:\Windows\_DX\DXSETUP.exe /silent
+Wait-Process DXSETUP
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 10
@@ -185,5 +182,5 @@ Remove-Item C:\Windows\_Registry.reg
 Remove-Item C:\_PostInstall.cmd
 Remove-Item C:\_DebloatScript.ps1
 Remove-Item C:\_AppSetup.ps1
-Stop-Computer -ComputerName localhost 
+Restart-Computer
 Remove-Item C:\_PostInstall.ps1
