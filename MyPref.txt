@@ -9,34 +9,27 @@
 9. Update system
 10. Reboot system
 11. Delete driver download dir in C:\ (AMD, Intell,Dell)
-12. WinRAR
-	- Use for removable disks - off
-	- Restore last working folder on startup - off
-	- Compression method - Best
-13. Pin BATCH, PortableApps, !APPS, !PROJECTS folders in quick access
-14. Set for every type of file portable program. Try add to powershell script
-15. Sounds
+12. Pin BATCH, PortableApps, !APPS, !PROJECTS folders in quick access
+13. Set for every type of file portable program. Try add to powershell script
+14. Sounds
 	- Disable unnecessary devices
 	- Change output devices
 	- Disable audio enhancements in/out device
 	- In Waves disable all
-16. Display
+15. Display
 	- Extend these displays
 	- Change main display
-17. Taskbar * For Windows 11 install StartAllBack
+16. Taskbar * For Windows 11 install StartAllBack
 	- Pin icon
 	- Disable lockscreen background picture
-18. Bluetooth - turn off 
-19. Check restore point
-20. AMD settings setup - import r520set.zip
-21. Powerplan setup. Switchable Dynamic Graphics - Maximize performance. Maybe it may change in reg.
-22. Device manager. Disable power saving in wireless, ethernet, USB
-23. VSCode
-	- Setup Git in git-bash.exe
-		* git config --global user.name "Pixaler"     
-		* git config --global user.email "gnidko02@gmail.com"    
-24. Startup Apps in Autoruns
-25. Delete temp files
-26. Clean manager
-27. Reboot
-28. Your Perfect !!!
+17. Bluetooth - turn off 
+18. Check restore point
+19. AMD settings setup - import r520set.zip
+20. Powerplan setup. Switchable Dynamic Graphics - Maximize performance. Maybe it may change in reg.
+21. Device manager. Disable power saving in wireless, ethernet, USB  
+22. Restore Word.exe if Windows Defender delete it
+23. Startup Apps in Autoruns
+24. Delete temp files
+25. Clean manager
+26. Reboot
+27. Your Perfect !!!

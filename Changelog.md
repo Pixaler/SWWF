@@ -26,6 +26,12 @@
 7. _AppSetup and _DeblaotScript now launch
 8. Now script wait until C++ and DX to be installed
 
-# v0.7.2
+# v0.8
 ## Changes
-1. _DebloatScript. Add XboxLive to uninstall
+1. _AppSetup. Check that K drive is mounted, if not launch truecrypt.bat and wait
+2. _AppSetup. OfficePortable add to Windows Defender exclusion
+3. _AppSetup. Add reg file to restore WinRAR settings
+4. _AppSetup. Add Telegram.reg files. Remove from _Registry.reg
+5. _AppSetup. Add Studio One and Melodyne setup
+6. _AppSetup. Git setups automatically
+7. _Registry.reg. Timezone UTC+2 Kyiv

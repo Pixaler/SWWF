@@ -22,6 +22,18 @@ Windows Registry Editor Version 5.00
 "sShortTime"="HH:mm"
 "iFirstDayOfWeek"="0"
 
+; Set timzone UTC +2 Kyiv
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+"Bias"=dword:ffffff88
+"DaylightBias"=dword:ffffffc4
+"DaylightName"="@tzres.dll,-351"
+"DaylightStart"=hex:00,00,03,00,05,00,03,00,00,00,00,00,00,00,00,00
+"StandardBias"=dword:00000000
+"StandardName"="@tzres.dll,-352"
+"StandardStart"=hex:00,00,0a,00,05,00,04,00,00,00,00,00,00,00,00,00
+"TimeZoneKeyName"="FLE Standard Time"
+"DynamicDaylightTimeDisabled"=dword:00000000
+"ActiveTimeBias"=dword:ffffff4c
 
 
 
@@ -872,32 +884,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 ; Turn off Windows Defender notifications
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications]
 "DisableNotifications"=dword:00000001
-
-
-
-
-; PROGRAMS SETTINGS
-; Add .tg extension in Windows for portable Telegram (Change directory, if it's diffrent)
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
-"URL Protocol"=""
-@="URL:Telegram Link"
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
-@="\"K:\\Telegram\\Telegram.exe,1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
-@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
-
 
 
 

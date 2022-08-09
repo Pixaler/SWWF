@@ -179,6 +179,8 @@ Remove-Item C:\Windows\_DX -Recurse
 Remove-Item C:\Windows\_BitsumHighestPerformance.pow
 Remove-Item C:\Windows\_C++.exe
 Remove-Item C:\Windows\_Registry.reg
+Remove-Item C:\Windows\_WinRAR.reg
+Remove-Item C:\Windows\_Telegram.reg
 Remove-Item C:\_PostInstall.cmd
 Remove-Item C:\_DebloatScript.ps1
 Remove-Item C:\_AppSetup.ps1

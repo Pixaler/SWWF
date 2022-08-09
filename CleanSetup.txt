@@ -159,6 +159,7 @@
 		* git config --global user.email "gnidko02@gmail.com"    
 	- Clone necessary repo
 36. foobar2000
+	- Create shortcut
 	- Skin https://github.com/Ottodix/Eole-foobar-theme#participate-to-the-theme
 	- Add media library
 	- Sort - library tree
@@ -223,8 +224,14 @@
 52. Delete temp files
 53. Clean manager
 54. Audacity
+	- Create shortcut
 55. OBS
-56. Backup !MOE, BATCH and PortableApps
-57. Upload backup on cloud
-56. Reboot
-57. Your Perfect !!!
+	- Create shortcut - in boot settings set -p (portable mode)
+56. LibreOffice
+	- Create shortcut
+57. Gimp
+	- Create shortcut
+58. Backup !MOE, BATCH and PortableApps 
+59. Upload backup on cloud
+60. Reboot
+61. Your Perfect !!!
