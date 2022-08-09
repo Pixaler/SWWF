@@ -35,3 +35,11 @@
 5. _AppSetup. Add Studio One and Melodyne setup
 6. _AppSetup. Git setups automatically
 7. _Registry.reg. Timezone UTC+2 Kyiv
+
+# v0.8.1 
+## Changes
+1. _AppSetup. Enable preview pane
+2. _PostInstall. Receive update for other Microsoft product
+
+## Fixes
+1. _PostInstall. Word.exe now restore from Windows Defender

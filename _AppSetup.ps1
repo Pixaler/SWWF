@@ -41,6 +41,8 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------ADD OFFICEPORTABLE FOLDER TO WHITELIST------------------
 Write-Host ---------------------------------------------------------------------------------
+Set-Location -Path "C:\Program Files\Windows Defender"
+./mpcmdrun -Restore -Name Trojan:Win32/Occamy.C -All -Path "C:\PortableApps\OfficePortable"
 Set-MpPreference -ExclusionPath C:\PortableApps\OfficePortable
 Write-Host .
 Write-Host .
