@@ -27,9 +27,8 @@
 19. AMD settings setup - import r520set.zip
 20. Powerplan setup. Switchable Dynamic Graphics - Maximize performance. Maybe it may change in reg.
 21. Device manager. Disable power saving in wireless, ethernet, USB  
-22. Restore Word.exe if Windows Defender delete it
-23. Startup Apps in Autoruns
-24. Delete temp files
-25. Clean manager
-26. Reboot
-27. Your Perfect !!!
+22. Startup Apps in Autoruns
+23. Delete temp files
+24. Clean manager
+25. Reboot
+26. Your Perfect !!!

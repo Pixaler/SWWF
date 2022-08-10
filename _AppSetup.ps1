@@ -71,7 +71,7 @@ Write-Host ---------------------------------------------------------------------
 Write-Host -----------------------------SETUP STUDIO ONE------------------------------------
 Write-Host ---------------------------------------------------------------------------------
 C:\PortableApps\StudioOne\'Studio One 5.5.2 Noinstall'\StudioOne5.5.2CreateSymLink.cmd
-C:\PortableApps\StudioOne\'Studio One 5.5.2 Noinstall'\StudioOne5.reg
+regedit.exe /s C:\PortableApps\StudioOne\'Studio One 5.5.2 Noinstall'\StudioOne5.reg
 Set-Location -Path "C:\Program Files\PreSonus\Studio One 5"
 ./'Studio One.exe'
 Wait-Process 'Studio One'
@@ -85,8 +85,8 @@ Write-Host -----------------------------SETUP MELODYNE--------------------------
 Write-Host ---------------------------------------------------------------------------------
 C:\PortableApps\Melodyne\'Melodyne 5'\SymLinkDeInstaller.cmd
 C:\PortableApps\Melodyne\'Melodyne 5'\SymLinkInstaller.cmd
-C:\PortableApps\Melodyne\'Melodyne 5'\Reg\1.reg
-C:\PortableApps\Melodyne\'Melodyne 5'\Reg\2.reg
+regedit.exe /s C:\PortableApps\Melodyne\'Melodyne 5'\Reg\1.reg
+regedit.exe /s C:\PortableApps\Melodyne\'Melodyne 5'\Reg\2.reg
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2

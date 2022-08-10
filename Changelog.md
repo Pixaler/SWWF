@@ -1,15 +1,26 @@
-# v0.6
+# v0.8.2
 ## Changes
-1. Uninstall Microsoft Edge in Windows 11 
-2. Remove disabling Windows Defender in bat and reg files. Try to find better way
-3. Remove disable auto update. This block settings in Windows Update 
+1. _AppSetup. All reg files now run silent
 
-# v0.7
-## Changes 
-1. Move to PowerShell
-2. Add ***_DebloatScript.ps1*** to uninstall blotware
-3. Add ***_AppSetup.ps1*** to setup my apps
-4. Move enviroment variable to script for better customization
+## Fixes
+1. _PostInstall. Word.exe now restore from Windows Defender
+
+# v0.8.1 
+## Changes
+1. _AppSetup. Enable preview pane
+
+## Fixes
+1. _PostInstall. Word.exe now restore from Windows Defender
+
+# v0.8
+## Changes
+1. _AppSetup. Check that K drive is mounted, if not launch truecrypt.bat and wait
+2. _AppSetup. OfficePortable add to Windows Defender exclusion
+3. _AppSetup. Add reg file to restore WinRAR settings
+4. _AppSetup. Add Telegram.reg files. Remove from _Registry.reg
+5. _AppSetup. Add Studio One and Melodyne setup
+6. _AppSetup. Git setups automatically
+7. _Registry.reg. Timezone UTC+2 Kyiv
 
 # v0.7.1
 ## Changes
@@ -26,19 +37,19 @@
 7. _AppSetup and _DeblaotScript now launch
 8. Now script wait until C++ and DX to be installed
 
-# v0.8
-## Changes
-1. _AppSetup. Check that K drive is mounted, if not launch truecrypt.bat and wait
-2. _AppSetup. OfficePortable add to Windows Defender exclusion
-3. _AppSetup. Add reg file to restore WinRAR settings
-4. _AppSetup. Add Telegram.reg files. Remove from _Registry.reg
-5. _AppSetup. Add Studio One and Melodyne setup
-6. _AppSetup. Git setups automatically
-7. _Registry.reg. Timezone UTC+2 Kyiv
+# v0.7
+## Changes 
+1. Move to PowerShell
+2. Add ***_DebloatScript.ps1*** to uninstall blotware
+3. Add ***_AppSetup.ps1*** to setup my apps
+4. Move enviroment variable to script for better customization
 
-# v0.8.1 
+# v0.6
 ## Changes
-1. _AppSetup. Enable preview pane
+1. Uninstall Microsoft Edge in Windows 11 
+2. Remove disabling Windows Defender in bat and reg files. Try to find better way
+3. Remove disable auto update. This block settings in Windows Update 
 
-## Fixes
-1. _PostInstall. Word.exe now restore from Windows Defender
+
+
+
