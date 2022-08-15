@@ -1,3 +1,23 @@
+Start-Sleep -Seconds 2
+Write-Host ---------------------------------------------------------------------------------
+Write-Host -------------------------------YOU RUNNING AS ADMIN?-----------------------------
+Write-Host ---------------------------------------------------------------------------------
+$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+if ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator) -eq $false)
+{
+    Write-Host .
+    Write-Host .
+    Write-Host Please run as administrator!
+    Start-Sleep -Seconds 2
+    Write-Host .
+    Write-Host .
+    Exit
+}
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------------CREATE FOLDERS------------------------------------
 Write-Host ---------------------------------------------------------------------------------

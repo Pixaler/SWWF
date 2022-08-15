@@ -1,3 +1,7 @@
+# v0.8.3
+## Changes
+1. _PostInstall. Now check that user run script as administrator
+2. Add Telegram.reg
 # v0.8.2
 ## Changes
 1. _AppSetup. All reg files now run silent
