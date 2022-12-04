@@ -167,6 +167,20 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
+Write-Host ----------------------------CAPS LIKE CHANGE LAYOUT------------------------------
+Write-Host ---------------------------------------------------------------------------------
+C:\Windows\engcaps\setup.exe 
+Wait-Process setup
+C:\Windows\ruscaps\setup.exe
+Wait-Process setup
+C:\Windows\ukrcaps\setup.exe
+Wait-Process setup
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
+Write-Host ---------------------------------------------------------------------------------
 Write-Host ----------------------------DISABLING NETWORK DISCOVERY--------------------------
 Write-Host ---------------------------------------------------------------------------------
 netsh advfirewall firewall set rule group="Network Discovery" new enable=No

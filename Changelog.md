@@ -1,3 +1,8 @@
+# v0.9
+## Changes
+1. Remove unused apps from _AppSetup.ps1
+2. Change keyboard layout now at CAPS
+
 # v0.8.3
 ## Changes
 1. _PostInstall. Now check that user run script as administrator
