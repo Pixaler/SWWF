@@ -108,6 +108,7 @@
 		browser.sessionstore.interval;150000000
 		browser.tabs.opentabfor.middleclick;false
 		middlemouse.openNewWindow;true
+		browser.tabs.tabmanager.enabled;false
 	- Settings
 		* General - Open links in tabs instead of new windows - Uncheck
 		* Home - Shortcut - Uncheck
