@@ -34,8 +34,8 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host --------------------------EDIT ENVIROMENTAL VARIABLES----------------------------
 Write-Host ---------------------------------------------------------------------------------
-[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin", [System.EnvironmentVariableTarget]::User)
-[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin",  [System.EnvironmentVariableTarget]::Machine)
+[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin;C:\PortableApps\nvim\bin", [System.EnvironmentVariableTarget]::User)
+[Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin;C:\PortableApps\nvim\bin",  [System.EnvironmentVariableTarget]::Machine)
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -44,7 +44,7 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host -------------------------------DESKTOP SHORTCUTS---------------------------------
 Write-Host ---------------------------------------------------------------------------------
-Copy-Item -Path "C:\BATCH\Desktop\*" -Destination "C:\Users\$env:USERNAME\Desktop" -Recurse
+Copy-Item -Path "C:\BATCH\Links\*" -Destination "C:\Users\$env:USERNAME\Favorites\Links" -Recurse
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2

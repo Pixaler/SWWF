@@ -1,3 +1,8 @@
+# v0.9.1
+## Changes
+1. Remove icon from taskbar. Now I use toolbar
+2. Add path to nvim
+
 # v0.9
 ## Changes
 1. Remove unused apps from _AppSetup.ps1
