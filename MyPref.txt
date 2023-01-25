@@ -28,7 +28,10 @@
 20. Powerplan setup. Switchable Dynamic Graphics - Maximize performance. Maybe it may change in reg.
 21. Device manager. Disable power saving in wireless, ethernet, USB  
 22. Startup Apps in Autoruns
-23. Delete temp files
-24. Clean manager
-25. Reboot
-26. Your Perfect !!!
+23. Disable Windows Defender
+	- Disable real-time and temper protection
+	- Launch disable-defender.exe (https://github.com/qtkite/defender-control)
+24. Delete temp files
+25. Clean manager
+26. Reboot
+27. Your Perfect !!!

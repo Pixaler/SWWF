@@ -32,6 +32,15 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
+Write-Host -------------------------------CREATE FOLDERS------------------------------------
+Write-Host ---------------------------------------------------------------------------------
+Copy-Item -Path "C:\BATCH\!shit\hack.ttf" -Destination "C:\Users\$env:WINDIR\Fonts"
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
+Write-Host ---------------------------------------------------------------------------------
 Write-Host --------------------------EDIT ENVIROMENTAL VARIABLES----------------------------
 Write-Host ---------------------------------------------------------------------------------
 [Environment]::SetEnvironmentVariable("Path", $env:PATH + ";C:\BATCH;C:\PortableApps\VSCode\bin;C:\PortableApps\Git\bin;C:\PortableApps\nvim\bin", [System.EnvironmentVariableTarget]::User)
@@ -42,9 +51,10 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
-Write-Host -------------------------------DESKTOP SHORTCUTS---------------------------------
+Write-Host -------------------------------TOOLBAR LINKS-------------------------------------
 Write-Host ---------------------------------------------------------------------------------
 Copy-Item -Path "C:\BATCH\Links\*" -Destination "C:\Users\$env:USERNAME\Favorites\Links" -Recurse
+Write-Host This is not a mistake
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -161,19 +171,20 @@ Write-Host ---------------------------------------------------------------------
 Write-Host ----------------------------IMPORTING REGISTRY TWEAKS----------------------------
 Write-Host ---------------------------------------------------------------------------------
 regedit.exe /s "C:\Windows\_Registry.reg"
+Stop-Process -name explorer -force
 Write-Host .
 Write-Host .
-Start-Sleep -Seconds 2
+Start-Sleep -Seconds 15
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host ----------------------------CAPS LIKE CHANGE LAYOUT------------------------------
 Write-Host ---------------------------------------------------------------------------------
-C:\Windows\engcaps\setup.exe 
+C:\Windows\engcaps\setup.exe /a
 Wait-Process setup
-C:\Windows\ruscaps\setup.exe
+C:\Windows\ruscaps\setup.exe /a
 Wait-Process setup
-C:\Windows\ukrcaps\setup.exe
+C:\Windows\ukrcaps\setup.exe /a
 Wait-Process setup
 Write-Host .
 Write-Host .
@@ -210,6 +221,9 @@ Write-Host .
 Write-Host .
 Start-Sleep -Seconds 5
 Remove-Item C:\Windows\_DX -Recurse
+Remove-Item C:\Windows\engcaps -Recurse
+Remove-Item C:\Windows\ruscaps -Recurse
+Remove-Item C:\Windows\ukrcaps -Recurse
 Remove-Item C:\Windows\_BitsumHighestPerformance.pow
 Remove-Item C:\Windows\_C++.exe
 Remove-Item C:\Windows\_Registry.reg

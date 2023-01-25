@@ -1,3 +1,7 @@
+# v0.9.2
+## Changes
+1. Fix bugs
+
 # v0.9.1
 ## Changes
 1. Remove icon from taskbar. Now I use toolbar
