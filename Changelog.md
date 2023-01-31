@@ -1,3 +1,14 @@
+# v1.0.0
+## Changes
+1. _AppSetup. Add WinRAR activation
+2. _AppSetup. Return Firefox Portable to default browser
+3. _DebloatScript. Remove all Xbox stuff
+4. _Registry. Add Capslock to change layout
+5. _Registry. Remove all shortcut from dekstop
+
+## Fixes
+1. _PostInstall. Now fonts and keyboard setup correctly
+
 # v0.9.2
 ## Changes
 1. Fix bugs

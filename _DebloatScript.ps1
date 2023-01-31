@@ -29,8 +29,11 @@ Get-AppxPackage -allusers MicrosoftTeams | Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftWindows.Client.WebExperience | Remove-AppxPackage
 Get-AppxPackage -allusers SpotifyAB.SpotifyMusic | Remove-AppxPackage
 Get-AppxPackage -allusers microsoft.windowscommunicationsapps | Remove-AppxPackage
-Get-AppxPackage -allusers *xboxapp*| Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftTeams* | Remove-AppxPackage
+# Remove all xbox stuff
+Get-ProvisionedAppxPackage -Online | `
+Where-Object { $_.PackageName -match "xbox" } | `
+ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
 C:\Windows\SysWOW64\OneDriveSetup.exe -uninstall
 Set-Location -Path "C:\Program Files (x86)\Microsoft\Edge\Application\9*\Installer" 
 ./setup.exe --uninstall --force-uninstall --system-level

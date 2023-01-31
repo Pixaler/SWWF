@@ -32,9 +32,9 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
-Write-Host -------------------------------CREATE FOLDERS------------------------------------
+Write-Host -------------------------------INSTALL FONTS-------------------------------------
 Write-Host ---------------------------------------------------------------------------------
-Copy-Item -Path "C:\BATCH\!shit\hack.ttf" -Destination "C:\Users\$env:WINDIR\Fonts"
+Copy-Item -Path "C:\Windows\hack.ttf" -Destination "C:\Windows\Fonts"
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -54,7 +54,6 @@ Write-Host ---------------------------------------------------------------------
 Write-Host -------------------------------TOOLBAR LINKS-------------------------------------
 Write-Host ---------------------------------------------------------------------------------
 Copy-Item -Path "C:\BATCH\Links\*" -Destination "C:\Users\$env:USERNAME\Favorites\Links" -Recurse
-Write-Host This is not a mistake
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -180,12 +179,15 @@ Write-Host .
 Write-Host ---------------------------------------------------------------------------------
 Write-Host ----------------------------CAPS LIKE CHANGE LAYOUT------------------------------
 Write-Host ---------------------------------------------------------------------------------
-C:\Windows\engcaps\setup.exe /a
-Wait-Process setup
-C:\Windows\ruscaps\setup.exe /a
-Wait-Process setup
-C:\Windows\ukrcaps\setup.exe /a
-Wait-Process setup
+C:\Windows\engcaps\setup.exe 
+Start-Sleep -Seconds 15
+Stop-Process -name setup -force
+C:\Windows\ruscaps\setup.exe 
+Start-Sleep -Seconds 15
+Stop-Process -name setup -force
+C:\Windows\ukrcaps\setup.exe 
+Start-Sleep -Seconds 15
+Stop-Process -name setup -force
 Write-Host .
 Write-Host .
 Start-Sleep -Seconds 2
@@ -229,6 +231,8 @@ Remove-Item C:\Windows\_C++.exe
 Remove-Item C:\Windows\_Registry.reg
 Remove-Item C:\Windows\_WinRAR.reg
 Remove-Item C:\Windows\_Telegram.reg
+remove-item C:\Windows\hack.ttf
+remove-item C:\Windows\rarreg.key
 Remove-Item C:\_PostInstall.cmd
 Remove-Item C:\_DebloatScript.ps1
 Remove-Item C:\_AppSetup.ps1
