@@ -1,0 +1,736 @@
+Windows Registry Editor Version 5.00
+
+; POWERSHELL
+; Allow scripts in CMD set-executionpolicy remotesigned
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell]
+"Path"="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+"ExecutionPolicy"="RemoteSigned"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell]
+"Path"="C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe"
+"ExecutionPolicy"="RemoteSigned"
+
+
+
+
+; DATA FORMATS
+[HKEY_CURRENT_USER\Control Panel\International]
+"sLongDate"="d MMMM, yyyy"
+"sShortDate"="dd.MM.yy"
+"sTime"=":"
+"sTimeFormat"="HH:mm:ss"
+"sShortTime"="HH:mm"
+"iFirstDayOfWeek"="0"
+
+; Set timzone UTC +2 Kyiv
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+"Bias"=dword:ffffffc4
+"DaylightBias"=dword:ffffffc4
+"DaylightName"="@tzres.dll,-291"
+"DaylightStart"=hex:00,00,03,00,05,00,02,00,00,00,00,00,00,00,00,00
+"StandardBias"=dword:00000000
+"StandardName"="@tzres.dll,-292"
+"StandardStart"=hex:00,00,0a,00,05,00,03,00,00,00,00,00,00,00,00,00
+"TimeZoneKeyName"="Central European Standard Time"
+"DynamicDaylightTimeDisabled"=dword:00000000
+"ActiveTimeBias"=dword:ffffffc4
+
+
+
+
+; TASKBAR
+; Enable toolbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop]
+"TaskbarWinXP"=hex:0c,00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,21,bf,5c,0e,\
+  5f,d1,d0,11,83,01,00,aa,00,5b,43,83,22,00,1c,00,0a,11,00,00,ff,ff,ff,ff,02,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,4c,00,00,00,01,14,02,00,00,00,\
+  00,00,c0,00,00,00,00,00,00,46,81,01,00,00,11,00,00,00,5e,02,da,b9,58,2b,d9,\
+  01,4f,5d,95,bb,58,2b,d9,01,84,2d,20,82,e1,2b,d9,01,00,00,00,00,00,00,00,00,\
+  01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,fc,00,3a,00,1f,44,47,1a,03,\
+  59,72,3f,a7,44,89,c5,55,95,fe,6b,30,ee,26,00,01,00,26,00,ef,be,10,00,00,00,\
+  29,d4,a5,99,58,2b,d9,01,f3,55,9c,91,2c,2c,d9,01,f3,55,9c,91,2c,2c,d9,01,14,\
+  00,20,00,00,00,1a,00,ee,bb,fe,23,00,00,10,00,61,f7,77,17,ad,68,8a,4d,87,bd,\
+  30,b7,59,fa,33,dd,00,00,a0,00,31,00,00,00,00,00,33,56,e7,44,11,00,4c,69,6e,\
+  6b,73,00,8c,00,09,00,04,00,ef,be,32,56,83,82,32,56,85,82,2e,00,00,00,e7,39,\
+  01,00,00,00,01,00,00,00,00,00,00,00,00,00,3a,00,00,00,00,00,7c,77,4d,00,4c,\
+  00,69,00,6e,00,6b,00,73,00,00,00,40,00,43,00,3a,00,5c,00,57,00,69,00,6e,00,\
+  64,00,6f,00,77,00,73,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,\
+  00,5c,00,69,00,65,00,66,00,72,00,61,00,6d,00,65,00,2e,00,64,00,6c,00,6c,00,\
+  2c,00,2d,00,31,00,32,00,33,00,38,00,35,00,00,00,14,00,00,00,10,00,00,00,05,\
+  00,00,a0,06,00,00,00,5a,00,00,00,1c,00,00,00,0b,00,00,a0,61,f7,77,17,ad,68,\
+  8a,4d,87,bd,30,b7,59,fa,33,dd,5a,00,00,00,60,00,00,00,03,00,00,a0,58,00,00,\
+  00,00,00,00,00,64,65,73,6b,74,6f,70,2d,6e,75,37,75,66,38,33,00,18,d5,b5,81,\
+  d8,ee,96,40,94,cf,71,8d,26,8f,e5,00,96,62,4a,aa,d3,97,ed,11,86,54,d8,d0,90,\
+  03,8f,a8,18,d5,b5,81,d8,ee,96,40,94,cf,71,8d,26,8f,e5,00,96,62,4a,aa,d3,97,\
+  ed,11,86,54,d8,d0,90,03,8f,a8,ce,00,00,00,09,00,00,a0,89,00,00,00,31,53,50,\
+  53,e2,8a,58,46,bc,4c,38,43,bb,fc,13,93,26,98,6d,ce,6d,00,00,00,04,00,00,00,\
+  00,1f,00,00,00,2e,00,00,00,53,00,2d,00,31,00,2d,00,35,00,2d,00,32,00,31,00,\
+  2d,00,32,00,38,00,33,00,36,00,32,00,37,00,31,00,30,00,30,00,36,00,2d,00,39,\
+  00,35,00,32,00,35,00,30,00,35,00,37,00,34,00,38,00,2d,00,32,00,33,00,37,00,\
+  34,00,37,00,37,00,35,00,39,00,31,00,39,00,2d,00,31,00,30,00,30,00,31,00,00,\
+  00,00,00,00,00,39,00,00,00,31,53,50,53,b1,16,6d,44,ad,8d,70,48,a7,48,40,2e,\
+  a4,3d,78,8c,1d,00,00,00,68,00,00,00,00,48,00,00,00,71,31,ff,b4,9b,16,4a,4a,\
+  9e,44,d8,0e,7b,de,e5,6c,00,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,02,\
+  00,00,00,da,01,00,00,01,00,00,00,04,00,00,00,68,00,00,00,00,00,00,00,5a,00,\
+  32,00,cd,05,00,00,34,56,3c,59,20,00,42,49,4f,53,2e,6c,6e,6b,00,00,42,00,09,\
+  00,04,00,ef,be,34,56,fd,5a,34,56,fd,5a,2e,00,00,00,32,58,06,00,00,00,0e,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,28,b1,c3,00,42,00,49,00,4f,00,53,\
+  00,2e,00,6c,00,6e,00,6b,00,00,00,18,00,00,00,00,00,00,00,6a,00,00,00,01,00,\
+  00,00,5c,00,32,00,a0,06,00,00,33,56,76,a1,20,00,42,72,61,76,65,2e,6c,6e,6b,\
+  00,44,00,09,00,04,00,ef,be,34,56,fd,5a,34,56,fd,5a,2e,00,00,00,34,58,06,00,\
+  00,00,09,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,de,8c,8f,00,42,00,72,\
+  00,61,00,76,00,65,00,2e,00,6c,00,6e,00,6b,00,00,00,18,00,00,00,00,00,00,00,\
+  82,00,00,00,03,00,00,00,74,00,32,00,07,05,00,00,2f,55,79,1f,20,00,50,52,4f,\
+  43,45,53,7e,31,2e,4c,4e,4b,00,00,58,00,09,00,04,00,ef,be,34,56,fd,5a,34,56,\
+  fd,5a,2e,00,00,00,36,58,06,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,50,00,72,00,6f,00,63,00,65,00,73,00,73,00,45,00,78,00,\
+  70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,6c,00,6e,00,6b,00,00,00,1c,00,00,\
+  00,00,00,00,00,7a,00,00,00,02,00,00,00,6c,00,32,00,67,01,00,00,33,56,2c,68,\
+  20,00,52,45,43,59,43,4c,7e,31,2e,4c,4e,4b,00,00,50,00,09,00,04,00,ef,be,34,\
+  56,fd,5a,34,56,fd,5a,2e,00,00,00,49,58,06,00,00,00,2a,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,18,29,b3,00,52,00,65,00,63,00,79,00,63,00,6c,00,65,\
+  00,20,00,42,00,69,00,6e,00,2e,00,6c,00,6e,00,6b,00,00,00,1c,00,00,00,00,00,\
+  00,00,bf,00,00,00,40,07,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,00,00,\
+  00,36,00,00,00,00,00,00,00,01,00,00,00,01,00,00,00,aa,4f,28,68,48,6a,d0,11,\
+  8c,78,00,c0,4f,d9,18,b4,65,05,00,00,40,0d,00,00,00,00,00,00,32,00,00,00,00,\
+  00,00,00,00,00,00,00,32,00,00,00,00,00,00,00,01,00,00,00
+
+; Never combine window
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarGlomLevel"=dword:00000002
+
+;Taskbar settings for multioly display
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MMTaskbarMode"=dword:00000002
+"MMTaskbarGlomLevel"=dword:00000002
+
+
+; Add seconds in taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSecondsInSystemClock"=dword:00000001
+
+; Remove search from taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"SearchboxTaskbarMode"=dword:00000000
+
+; Show all taskbar icons
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000000
+
+
+
+
+; EXPLORER
+;Change Windows default folders location
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]
+"Personal"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,44,00,72,00,69,00,\
+  76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,00,4f,00,52,00,00,00
+"{374DE290-123F-4565-9164-39C4925E467B}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+"{F42EE2D3-909F-4907-8871-4C22FC0BF756}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,\
+  00,4f,00,52,00,00,00
+"{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+
+;Enable preview pane
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\DetailsContainer]
+"DetailsContainer"=hex:02,00,00,00,01,00,00,00
+
+
+
+
+; PERSONALIZATION
+; Background - solid color: black
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WallPaper"=""
+
+[HKEY_CURRENT_USER\Control Panel\Colors]
+"Background"="0 0 0"
+
+; Remove This PC from desktop
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
+
+; Remove Recycle bin from desktop
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
+
+
+
+
+
+;KEYBOARD
+; Alt tab open windows only
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MultiTaskingAltTabFilter"=dword:00000003
+
+;Change CAPSLOCK to switch layout
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,29,00,3a,00,3a,00,46,00,56,00,29,00,00,00,00,00
+
+;Enable NumLock
+[HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="2"
+
+
+
+
+; ADVANCED SYSTEM SETTINGS
+;Set custom enviroment variable for user
+[HKEY_CURRENT_USER\Environment]
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+;Set custom enviroment variable for system
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+
+
+
+;APP SETUP
+;Telegram
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
+"URL Protocol"=""
+@="URL:Telegram Link"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
+@="\"K:\\Telegram\\Telegram.exe,1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+;WinRAR
+[HKEY_CURRENT_USER\Software\WinRAR]
+"ExportedSettings"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\WinRAR\Compression]
+"DefFolder"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\DialogEditHistory]
+
+
+[HKEY_CURRENT_USER\Software\WinRAR\Extraction]
+"DefFolder"=""
+"AppendName"=dword:00000001
+"RemoveRedundantFolder"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\WinRAR\FileList]
+
+[HKEY_CURRENT_USER\Software\WinRAR\FileList\ArcColumnWidths]
+"name"=dword:00000078
+"size"=dword:00000050
+"psize"=dword:00000050
+"type"=dword:00000078
+"mtime"=dword:00000064
+"crc"=dword:00000046
+
+[HKEY_CURRENT_USER\Software\WinRAR\FileList\FileColumnWidths]
+"name"=dword:00000096
+"size"=dword:00000064
+"type"=dword:00000096
+"mtime"=dword:0000007d
+
+[HKEY_CURRENT_USER\Software\WinRAR\General]
+"VerInfo"=hex:00,0b,06,00,36,a4,29,b0,67,aa,d8,01
+"Priority"=dword:00000001
+"Threads"=dword:00000000
+"History"=dword:00000001
+"DlgHistory"=dword:00000001
+"WizardMode"=dword:00000000
+"OnTop"=dword:00000000
+"ShowComment"=dword:00000001
+"Log"=dword:00000000
+"LimitLog"=dword:00000000
+"LogSize"=dword:000003e8
+"ReuseWindow"=dword:00000000
+"Sound"=dword:00000001
+"RestoreFolder"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\WinRAR\General\Toolbar]
+"Size"=dword:00000002
+"ButtonsText"=dword:00000001
+"Lock"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\WinRAR\General\Toolbar\Layout]
+"Band76_0"=hex:4c,00,00,00,63,01,00,00,04,02,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,3b,00,00,00,b4,02,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,01,00,00,00
+"Band76_1"=hex:4c,00,00,00,63,01,00,00,05,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,18,00,00,00,2a,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,02,00,00,00
+"Band76_2"=hex:4c,00,00,00,63,01,00,00,04,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,18,00,00,00,64,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00
+
+[HKEY_CURRENT_USER\Software\WinRAR\Interface]
+"FullPathsTitle"=dword:00000000
+"SystemProgressBar"=dword:00000001
+"TaskbarProgressBar"=dword:00000001
+"AsArchives"="*.exe"
+"ShowPassword"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\WinRAR\Interface\Comment]
+"LeftBorder"=dword:000002ab
+
+[HKEY_CURRENT_USER\Software\WinRAR\Interface\MainWin]
+"Placement"=hex:2c,00,00,00,02,00,00,00,03,00,00,00,ff,ff,ff,ff,ff,ff,ff,ff,ff,\
+  ff,ff,ff,ff,ff,ff,ff,60,00,00,00,60,00,00,00,00,06,00,00,44,03,00,00
+
+[HKEY_CURRENT_USER\Software\WinRAR\Interface\Misc]
+"RemShown"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\WinRAR\Paths]
+"TempFolder"="C:\\TEMP"
+"TempRemovableOnly"=dword:00000000
+"StartFolder"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles]
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles\0]
+"Name"="Default Profile"
+"Default"=dword:00000001
+"ImmExec"=dword:00000000
+"ExclNames"=""
+"StoreNames"="*.rar *.zip *.zipx *.cab *.7z *.ace *.arj *.bz2 *.gz *.lha *.lzh *.taz *.tgz *.xz *.txz"
+"UseRAR"=dword:00000001
+"RAR5"=dword:00000001
+"SFXModule"=""
+"SFXIcon"=""
+"SFXLogo"=""
+"SFXLogo2"=""
+"SFXElevate"=dword:00000000
+"CmtFile"=""
+"CmtDataWide"=hex:00,00
+"VolumeSize"="0"
+"VolSizeMod"=dword:00000002
+"VolPause"=dword:00000000
+"OldVolNames"=dword:00000000
+"RecVolNumber"=dword:00000000
+"Update"=dword:00000000
+"Fresh"=dword:00000000
+"SyncFiles"=dword:00000000
+"Overwrite"=dword:00000000
+"Move"=dword:00000000
+"ArcRecBin"=dword:00000000
+"ArcWipe"=dword:00000000
+"WipeIfPassword"=dword:00000000
+"Solid"=dword:00000000
+"Test"=dword:00000000
+"RecEnabled"=dword:00000000
+"RecSize"=dword:fffffffd
+"EraseDest"=dword:00000000
+"AddArcOnly"=dword:00000000
+"ClearArc"=dword:00000000
+"Lock"=dword:00000000
+"Method"=dword:00000005
+"DictSizeLZ"=dword:00400000
+"DictSize"=dword:02000000
+"Background"=dword:00000000
+"WaitForOther"=dword:00000000
+"Shutdown"=dword:00000000
+"PasswordData"=hex:00
+"EncryptHeaders"=dword:00000000
+"ZipLegacyEncrypt"=dword:00000000
+"OpenShared"=dword:00000000
+"ProcessOwners"=dword:00000000
+"SaveStreams"=dword:00000000
+"SaveSymLinks"=dword:00000000
+"SaveHardLinks"=dword:00000000
+"GenerateArcName"=dword:00000000
+"VersionControl"=dword:00000000
+"BLAKE2"=dword:00000000
+"FileCopies"=dword:00000000
+"QuickOpen"=dword:00000001
+"GenerateMask"="yyyymmddhhmmss"
+"FileTimeMode"=dword:00000000
+"FileDays"=dword:00000000
+"FileHours"=dword:00000000
+"FileMinutes"=dword:00000000
+"FileTimeLimit"=hex(b):00,00,00,00,00,00,00,00
+"ArcTimeOriginal"=dword:00000000
+"ArcTimeLatest"=dword:00000000
+"mtime"=dword:00000002
+"ctime"=dword:00000000
+"atime"=dword:00000000
+"PreserveAtime"=dword:00000000
+"PathsAbs"=dword:00000000
+"PathsNone"=dword:00000000
+"PathsAbsDrive"=dword:00000000
+"SeparateArc"=dword:00000000
+"SeparateArcDoubleExt"=dword:00000000
+"SeparateArcSubfolders"=dword:00000000
+"EmailArcTo"=""
+"PackDetails"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CmdSwitches"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles\1]
+"Name"="Create e-mail attachment"
+"Default"=dword:00000000
+"ImmExec"=dword:00000000
+"ExclNames"=""
+"StoreNames"=""
+"UseRAR"=dword:00000001
+"RAR5"=dword:00000001
+"SFXModule"=""
+"SFXIcon"=""
+"SFXLogo"=""
+"SFXLogo2"=""
+"SFXElevate"=dword:00000000
+"CmtFile"=""
+"CmtDataWide"=hex:00,00
+"VolumeSize"="0"
+"VolSizeMod"=dword:00000002
+"VolPause"=dword:00000000
+"OldVolNames"=dword:00000000
+"RecVolNumber"=dword:00000000
+"Update"=dword:00000000
+"Fresh"=dword:00000000
+"SyncFiles"=dword:00000000
+"Overwrite"=dword:00000000
+"Move"=dword:00000000
+"ArcRecBin"=dword:00000000
+"ArcWipe"=dword:00000000
+"WipeIfPassword"=dword:00000000
+"Solid"=dword:00000001
+"Test"=dword:00000000
+"RecEnabled"=dword:00000000
+"RecSize"=dword:fffffffd
+"EraseDest"=dword:00000000
+"AddArcOnly"=dword:00000000
+"ClearArc"=dword:00000000
+"Lock"=dword:00000000
+"Method"=dword:00000005
+"DictSizeLZ"=dword:02000000
+"DictSize"=dword:00000000
+"Background"=dword:00000000
+"WaitForOther"=dword:00000000
+"Shutdown"=dword:00000000
+"PasswordData"=hex:00
+"EncryptHeaders"=dword:00000000
+"ZipLegacyEncrypt"=dword:00000000
+"OpenShared"=dword:00000000
+"ProcessOwners"=dword:00000000
+"SaveStreams"=dword:00000000
+"SaveSymLinks"=dword:00000000
+"SaveHardLinks"=dword:00000000
+"GenerateArcName"=dword:00000000
+"VersionControl"=dword:00000000
+"BLAKE2"=dword:00000000
+"FileCopies"=dword:00000000
+"QuickOpen"=dword:00000001
+"GenerateMask"="yyyymmddhhmmss"
+"FileTimeMode"=dword:00000000
+"FileDays"=dword:00000000
+"FileHours"=dword:00000000
+"FileMinutes"=dword:00000000
+"FileTimeLimit"=hex(b):00,00,00,00,00,00,00,00
+"ArcTimeOriginal"=dword:00000000
+"ArcTimeLatest"=dword:00000000
+"mtime"=dword:00000002
+"ctime"=dword:00000000
+"atime"=dword:00000000
+"PreserveAtime"=dword:00000000
+"PathsAbs"=dword:00000000
+"PathsNone"=dword:00000000
+"PathsAbsDrive"=dword:00000000
+"SeparateArc"=dword:00000000
+"SeparateArcDoubleExt"=dword:00000000
+"SeparateArcSubfolders"=dword:00000000
+"EmailArcTo"=""
+"PackDetails"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CmdSwitches"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles\2]
+"Name"="Backup selected files"
+"Default"=dword:00000000
+"ImmExec"=dword:00000000
+"ExclNames"=""
+"StoreNames"=""
+"UseRAR"=dword:00000001
+"RAR5"=dword:00000001
+"SFXModule"=""
+"SFXIcon"=""
+"SFXLogo"=""
+"SFXLogo2"=""
+"SFXElevate"=dword:00000000
+"CmtFile"=""
+"CmtDataWide"=hex:00,00
+"VolumeSize"="0"
+"VolSizeMod"=dword:00000002
+"VolPause"=dword:00000000
+"OldVolNames"=dword:00000000
+"RecVolNumber"=dword:00000000
+"Update"=dword:00000000
+"Fresh"=dword:00000000
+"SyncFiles"=dword:00000000
+"Overwrite"=dword:00000000
+"Move"=dword:00000000
+"ArcRecBin"=dword:00000000
+"ArcWipe"=dword:00000000
+"WipeIfPassword"=dword:00000000
+"Solid"=dword:00000000
+"Test"=dword:00000000
+"RecEnabled"=dword:00000001
+"RecSize"=dword:fffffffd
+"EraseDest"=dword:00000000
+"AddArcOnly"=dword:00000000
+"ClearArc"=dword:00000000
+"Lock"=dword:00000000
+"Method"=dword:00000003
+"DictSizeLZ"=dword:02000000
+"DictSize"=dword:00000000
+"Background"=dword:00000000
+"WaitForOther"=dword:00000000
+"Shutdown"=dword:00000000
+"PasswordData"=hex:00
+"EncryptHeaders"=dword:00000000
+"ZipLegacyEncrypt"=dword:00000000
+"OpenShared"=dword:00000001
+"ProcessOwners"=dword:00000000
+"SaveStreams"=dword:00000001
+"SaveSymLinks"=dword:00000000
+"SaveHardLinks"=dword:00000000
+"GenerateArcName"=dword:00000001
+"VersionControl"=dword:00000000
+"BLAKE2"=dword:00000000
+"FileCopies"=dword:00000000
+"QuickOpen"=dword:00000001
+"GenerateMask"="yyyymmddhhmmss"
+"FileTimeMode"=dword:00000000
+"FileDays"=dword:00000000
+"FileHours"=dword:00000000
+"FileMinutes"=dword:00000000
+"FileTimeLimit"=hex(b):00,00,00,00,00,00,00,00
+"ArcTimeOriginal"=dword:00000000
+"ArcTimeLatest"=dword:00000000
+"mtime"=dword:00000002
+"ctime"=dword:00000000
+"atime"=dword:00000000
+"PreserveAtime"=dword:00000000
+"PathsAbs"=dword:00000000
+"PathsNone"=dword:00000000
+"PathsAbsDrive"=dword:00000000
+"SeparateArc"=dword:00000000
+"SeparateArcDoubleExt"=dword:00000000
+"SeparateArcSubfolders"=dword:00000000
+"EmailArcTo"=""
+"PackDetails"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CmdSwitches"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles\3]
+"Name"="Create 10 MB volumes"
+"Default"=dword:00000000
+"ImmExec"=dword:00000000
+"ExclNames"=""
+"StoreNames"=""
+"UseRAR"=dword:00000001
+"RAR5"=dword:00000001
+"SFXModule"=""
+"SFXIcon"=""
+"SFXLogo"=""
+"SFXLogo2"=""
+"SFXElevate"=dword:00000000
+"CmtFile"=""
+"CmtDataWide"=hex:00,00
+"VolumeSize"="10485760"
+"VolSizeMod"=dword:00000002
+"VolPause"=dword:00000000
+"OldVolNames"=dword:00000000
+"RecVolNumber"=dword:00000000
+"Update"=dword:00000000
+"Fresh"=dword:00000000
+"SyncFiles"=dword:00000000
+"Overwrite"=dword:00000000
+"Move"=dword:00000000
+"ArcRecBin"=dword:00000000
+"ArcWipe"=dword:00000000
+"WipeIfPassword"=dword:00000000
+"Solid"=dword:00000001
+"Test"=dword:00000000
+"RecEnabled"=dword:00000001
+"RecSize"=dword:fffffffd
+"EraseDest"=dword:00000000
+"AddArcOnly"=dword:00000000
+"ClearArc"=dword:00000000
+"Lock"=dword:00000000
+"Method"=dword:00000003
+"DictSizeLZ"=dword:02000000
+"DictSize"=dword:00000000
+"Background"=dword:00000000
+"WaitForOther"=dword:00000000
+"Shutdown"=dword:00000000
+"PasswordData"=hex:00
+"EncryptHeaders"=dword:00000000
+"ZipLegacyEncrypt"=dword:00000000
+"OpenShared"=dword:00000000
+"ProcessOwners"=dword:00000000
+"SaveStreams"=dword:00000000
+"SaveSymLinks"=dword:00000000
+"SaveHardLinks"=dword:00000000
+"GenerateArcName"=dword:00000000
+"VersionControl"=dword:00000000
+"BLAKE2"=dword:00000000
+"FileCopies"=dword:00000000
+"QuickOpen"=dword:00000001
+"GenerateMask"="yyyymmddhhmmss"
+"FileTimeMode"=dword:00000000
+"FileDays"=dword:00000000
+"FileHours"=dword:00000000
+"FileMinutes"=dword:00000000
+"FileTimeLimit"=hex(b):00,00,00,00,00,00,00,00
+"ArcTimeOriginal"=dword:00000000
+"ArcTimeLatest"=dword:00000000
+"mtime"=dword:00000002
+"ctime"=dword:00000000
+"atime"=dword:00000000
+"PreserveAtime"=dword:00000000
+"PathsAbs"=dword:00000000
+"PathsNone"=dword:00000000
+"PathsAbsDrive"=dword:00000000
+"SeparateArc"=dword:00000000
+"SeparateArcDoubleExt"=dword:00000000
+"SeparateArcSubfolders"=dword:00000000
+"EmailArcTo"=""
+"PackDetails"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CmdSwitches"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Profiles\4]
+"Name"="ZIP archive (low compression)"
+"Default"=dword:00000000
+"ImmExec"=dword:00000000
+"ExclNames"=""
+"StoreNames"=""
+"UseRAR"=dword:00000000
+"RAR5"=dword:00000001
+"SFXModule"=""
+"SFXIcon"=""
+"SFXLogo"=""
+"SFXLogo2"=""
+"SFXElevate"=dword:00000000
+"CmtFile"=""
+"CmtDataWide"=hex:00,00
+"VolumeSize"="0"
+"VolSizeMod"=dword:00000002
+"VolPause"=dword:00000000
+"OldVolNames"=dword:00000000
+"RecVolNumber"=dword:00000000
+"Update"=dword:00000000
+"Fresh"=dword:00000000
+"SyncFiles"=dword:00000000
+"Overwrite"=dword:00000000
+"Move"=dword:00000000
+"ArcRecBin"=dword:00000000
+"ArcWipe"=dword:00000000
+"WipeIfPassword"=dword:00000000
+"Solid"=dword:00000000
+"Test"=dword:00000000
+"RecEnabled"=dword:00000000
+"RecSize"=dword:fffffffd
+"EraseDest"=dword:00000000
+"AddArcOnly"=dword:00000000
+"ClearArc"=dword:00000000
+"Lock"=dword:00000000
+"Method"=dword:00000003
+"Background"=dword:00000000
+"WaitForOther"=dword:00000000
+"Shutdown"=dword:00000000
+"PasswordData"=hex:00
+"EncryptHeaders"=dword:00000000
+"ZipLegacyEncrypt"=dword:00000000
+"OpenShared"=dword:00000000
+"ProcessOwners"=dword:00000000
+"SaveStreams"=dword:00000000
+"SaveSymLinks"=dword:00000000
+"SaveHardLinks"=dword:00000000
+"GenerateArcName"=dword:00000000
+"VersionControl"=dword:00000000
+"BLAKE2"=dword:00000000
+"FileCopies"=dword:00000000
+"QuickOpen"=dword:00000001
+"GenerateMask"="yyyymmddhhmmss"
+"FileTimeMode"=dword:00000000
+"FileDays"=dword:00000000
+"FileHours"=dword:00000000
+"FileMinutes"=dword:00000000
+"FileTimeLimit"=hex(b):00,00,00,00,00,00,00,00
+"ArcTimeOriginal"=dword:00000000
+"ArcTimeLatest"=dword:00000000
+"mtime"=dword:00000002
+"ctime"=dword:00000000
+"atime"=dword:00000000
+"PreserveAtime"=dword:00000000
+"PathsAbs"=dword:00000000
+"PathsNone"=dword:00000000
+"PathsAbsDrive"=dword:00000000
+"SeparateArc"=dword:00000000
+"SeparateArcDoubleExt"=dword:00000000
+"SeparateArcSubfolders"=dword:00000000
+"EmailArcTo"=""
+"PackDetails"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,03,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"CmdSwitches"=""
+
+[HKEY_CURRENT_USER\Software\WinRAR\Setup]
+"CascadedMenu"=dword:00000001
+"NewContextMenu"=dword:00000001
+
+; OTHER
+; Add Hack Bold font
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts]
+"Hack NFM"="hack.ttf"
