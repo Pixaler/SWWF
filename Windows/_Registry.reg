@@ -12,41 +12,7 @@ Windows Registry Editor Version 5.00
 
 
 
-
-; DATA FORMATS
-[HKEY_CURRENT_USER\Control Panel\International]
-"sLongDate"="d MMMM, yyyy"
-"sShortDate"="dd-MMM-yy"
-"sTime"=":"
-"sTimeFormat"="HH:mm:ss"
-"sShortTime"="HH:mm"
-"iFirstDayOfWeek"="0"
-
-; Set timzone UTC +2 Kyiv
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
-"Bias"=dword:ffffff88
-"DaylightBias"=dword:ffffffc4
-"DaylightName"="@tzres.dll,-351"
-"DaylightStart"=hex:00,00,03,00,05,00,03,00,00,00,00,00,00,00,00,00
-"StandardBias"=dword:00000000
-"StandardName"="@tzres.dll,-352"
-"StandardStart"=hex:00,00,0a,00,05,00,04,00,00,00,00,00,00,00,00,00
-"TimeZoneKeyName"="FLE Standard Time"
-"DynamicDaylightTimeDisabled"=dword:00000000
-"ActiveTimeBias"=dword:ffffff4c
-
-
-
 ; TASKBAR
-; Never combine window
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"TaskbarGlomLevel"=dword:00000002
-
-;Taskbar settings for multioly display
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"MMTaskbarMode"=dword:00000002
-"MMTaskbarGlomLevel"=dword:00000002
-
 ; Remove chat from taskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "TaskbarMn"=dword:00000000
@@ -55,10 +21,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "ShowTaskViewButton"=dword:00000000
 
-; Add seconds in taskbar
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"ShowSecondsInSystemClock"=dword:00000001
-
 ; People - hide
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People]
 "PeopleBand"=dword:00000000
@@ -66,10 +28,6 @@ Windows Registry Editor Version 5.00
 ; Cortana - hide
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "ShowCortanaButton"=dword:00000000
-
-; Remove search from taskbar
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
-"SearchboxTaskbarMode"=dword:00000000
 
 ; Remove meet now
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
@@ -86,11 +44,6 @@ Windows Registry Editor Version 5.00
 ; Remove taskbar pins 
 [-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\AuxilliaryPins]
-
-; Show all taskbar icons
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
-"EnableAutoTray"=dword:00000000
-
 
 
 
@@ -125,24 +78,6 @@ Windows Registry Editor Version 5.00
 
 
 ; EXPLORER
-;Change Windows default folders location
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]
-"Personal"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,44,00,72,00,69,00,\
-  76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,00,4f,00,52,00,00,00
-"{374DE290-123F-4565-9164-39C4925E467B}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
-  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
-"{F42EE2D3-909F-4907-8871-4C22FC0BF756}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,\
-  00,4f,00,52,00,00,00
-"{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
-  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
-  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
-
-;Enable preview pane
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\DetailsContainer]
-"DetailsContainer"=hex:02,00,00,00,01,00,00,00
-
 ; Remove arrow from shorcut
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons]
 "29"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,74,00,\
@@ -230,13 +165,6 @@ Windows Registry Editor Version 5.00
 "LockScreenImage"=""
 "NoChangingLockScreen"=dword:00000000
 
-; Background - solid color: black
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"WallPaper"=""
-
-[HKEY_CURRENT_USER\Control Panel\Colors]
-"Background"="0 0 0"
-
 ; Dark theme 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
@@ -278,21 +206,6 @@ Windows Registry Editor Version 5.00
 ; Disable Transparency
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "EnableTransparency"=dword:00000000
-
-; Remove This PC from desktop
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
-"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
- 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
-"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
-
-; Remove Recycle bin from desktop
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
-"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
- 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
-"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
-
 
 
 
@@ -386,10 +299,6 @@ Windows Registry Editor Version 5.00
 "ShowCasing"=dword:00000000
 "ShowShiftLock"=dword:00000000
 
-;Change CAPSLOCK to switch layout
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
-"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,29,00,3a,00,3a,00,46,00,56,00,29,00,00,00,00,00
-
 ;Enable NumLock
 [HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
 "InitialKeyboardIndicators"="2"
@@ -444,15 +353,6 @@ Windows Registry Editor Version 5.00
 
 
 ; ADVANCED SYSTEM SETTINGS
-;Set custom enviroment variable for user
-[HKEY_CURRENT_USER\Environment]
-"TEMP"="C:\\TEMP"
-"TMP"="C:\\TEMP"
-;Set custom enviroment variable for system
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
-"TEMP"="C:\\TEMP"
-"TMP"="C:\\TEMP"
-
 ; Disable retore point
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
 "DisableSR"=dword:00000001
@@ -594,6 +494,14 @@ Windows Registry Editor Version 5.00
 
 
 ; PRIVACY & SECURITY
+; Disable UAC
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+
+; Disable use my sign in info after restart
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableAutomaticRestartSignOn"=dword:00000001
+
 ; Location
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location]
 "Value"="Deny"
@@ -880,17 +788,6 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications]
 "DisableNotifications"=dword:00000001
 
-
-
-; OTHER
-; Disable widgets in Windows 11. Free 1.5 Gb of RAM
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"TaskbarDa"=dword:00000000
-
-; Disable Microsoft Store auto update
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsStore]
-"AutoDownload"=dword:00000002
-
 ;Disable "Open file security warning"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments]
 "SaveZoneInformation"=dword:00000001
@@ -904,91 +801,43 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Associations]
 "LowRiskFileTypes"=-
 
+; Disable SmartScreen
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
+
+
+
+
+
+; PERFOMANCE
+; Disable widgets in Windows 11. Free 1.5 Gb of RAM
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarDa"=dword:00000000
+
+
+
+
+;WINDOWS UPDATES
 ; Disable driver searching
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
 "SearchOrderConfig"=dword:00000000
+
+; Disable Microsoft Store auto update
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsStore]
+"AutoDownload"=dword:00000002
 
 ; Disable automatic maintenance
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
 "MaintenanceDisabled"=dword:00000001
 
-; Disable use my sign in info after restart
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
-"DisableAutomaticRestartSignOn"=dword:00000001
-
 ; Disable automatically update maps
 [HKEY_LOCAL_MACHINE\SYSTEM\Maps]
 "AutoUpdateEnabled"=dword:00000000
 
-; Alt tab open windows only
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"MultiTaskingAltTabFilter"=dword:00000003
 
-; Disable UAC
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
-"EnableLUA"=dword:00000000
 
-; Enable toolbar
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop]
-"TaskbarWinXP"=hex:0c,00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,21,bf,5c,0e,\
-  5f,d1,d0,11,83,01,00,aa,00,5b,43,83,22,00,1c,00,0a,11,00,00,ff,ff,ff,ff,02,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,4c,00,00,00,01,14,02,00,00,00,\
-  00,00,c0,00,00,00,00,00,00,46,81,01,00,00,11,00,00,00,5e,02,da,b9,58,2b,d9,\
-  01,4f,5d,95,bb,58,2b,d9,01,84,2d,20,82,e1,2b,d9,01,00,00,00,00,00,00,00,00,\
-  01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,fc,00,3a,00,1f,44,47,1a,03,\
-  59,72,3f,a7,44,89,c5,55,95,fe,6b,30,ee,26,00,01,00,26,00,ef,be,10,00,00,00,\
-  29,d4,a5,99,58,2b,d9,01,f3,55,9c,91,2c,2c,d9,01,f3,55,9c,91,2c,2c,d9,01,14,\
-  00,20,00,00,00,1a,00,ee,bb,fe,23,00,00,10,00,61,f7,77,17,ad,68,8a,4d,87,bd,\
-  30,b7,59,fa,33,dd,00,00,a0,00,31,00,00,00,00,00,33,56,e7,44,11,00,4c,69,6e,\
-  6b,73,00,8c,00,09,00,04,00,ef,be,32,56,83,82,32,56,85,82,2e,00,00,00,e7,39,\
-  01,00,00,00,01,00,00,00,00,00,00,00,00,00,3a,00,00,00,00,00,7c,77,4d,00,4c,\
-  00,69,00,6e,00,6b,00,73,00,00,00,40,00,43,00,3a,00,5c,00,57,00,69,00,6e,00,\
-  64,00,6f,00,77,00,73,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,\
-  00,5c,00,69,00,65,00,66,00,72,00,61,00,6d,00,65,00,2e,00,64,00,6c,00,6c,00,\
-  2c,00,2d,00,31,00,32,00,33,00,38,00,35,00,00,00,14,00,00,00,10,00,00,00,05,\
-  00,00,a0,06,00,00,00,5a,00,00,00,1c,00,00,00,0b,00,00,a0,61,f7,77,17,ad,68,\
-  8a,4d,87,bd,30,b7,59,fa,33,dd,5a,00,00,00,60,00,00,00,03,00,00,a0,58,00,00,\
-  00,00,00,00,00,64,65,73,6b,74,6f,70,2d,6e,75,37,75,66,38,33,00,18,d5,b5,81,\
-  d8,ee,96,40,94,cf,71,8d,26,8f,e5,00,96,62,4a,aa,d3,97,ed,11,86,54,d8,d0,90,\
-  03,8f,a8,18,d5,b5,81,d8,ee,96,40,94,cf,71,8d,26,8f,e5,00,96,62,4a,aa,d3,97,\
-  ed,11,86,54,d8,d0,90,03,8f,a8,ce,00,00,00,09,00,00,a0,89,00,00,00,31,53,50,\
-  53,e2,8a,58,46,bc,4c,38,43,bb,fc,13,93,26,98,6d,ce,6d,00,00,00,04,00,00,00,\
-  00,1f,00,00,00,2e,00,00,00,53,00,2d,00,31,00,2d,00,35,00,2d,00,32,00,31,00,\
-  2d,00,32,00,38,00,33,00,36,00,32,00,37,00,31,00,30,00,30,00,36,00,2d,00,39,\
-  00,35,00,32,00,35,00,30,00,35,00,37,00,34,00,38,00,2d,00,32,00,33,00,37,00,\
-  34,00,37,00,37,00,35,00,39,00,31,00,39,00,2d,00,31,00,30,00,30,00,31,00,00,\
-  00,00,00,00,00,39,00,00,00,31,53,50,53,b1,16,6d,44,ad,8d,70,48,a7,48,40,2e,\
-  a4,3d,78,8c,1d,00,00,00,68,00,00,00,00,48,00,00,00,71,31,ff,b4,9b,16,4a,4a,\
-  9e,44,d8,0e,7b,de,e5,6c,00,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,02,\
-  00,00,00,da,01,00,00,01,00,00,00,04,00,00,00,68,00,00,00,00,00,00,00,5a,00,\
-  32,00,cd,05,00,00,34,56,3c,59,20,00,42,49,4f,53,2e,6c,6e,6b,00,00,42,00,09,\
-  00,04,00,ef,be,34,56,fd,5a,34,56,fd,5a,2e,00,00,00,32,58,06,00,00,00,0e,00,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,28,b1,c3,00,42,00,49,00,4f,00,53,\
-  00,2e,00,6c,00,6e,00,6b,00,00,00,18,00,00,00,00,00,00,00,6a,00,00,00,01,00,\
-  00,00,5c,00,32,00,a0,06,00,00,33,56,76,a1,20,00,42,72,61,76,65,2e,6c,6e,6b,\
-  00,44,00,09,00,04,00,ef,be,34,56,fd,5a,34,56,fd,5a,2e,00,00,00,34,58,06,00,\
-  00,00,09,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,de,8c,8f,00,42,00,72,\
-  00,61,00,76,00,65,00,2e,00,6c,00,6e,00,6b,00,00,00,18,00,00,00,00,00,00,00,\
-  82,00,00,00,03,00,00,00,74,00,32,00,07,05,00,00,2f,55,79,1f,20,00,50,52,4f,\
-  43,45,53,7e,31,2e,4c,4e,4b,00,00,58,00,09,00,04,00,ef,be,34,56,fd,5a,34,56,\
-  fd,5a,2e,00,00,00,36,58,06,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00,00,50,00,72,00,6f,00,63,00,65,00,73,00,73,00,45,00,78,00,\
-  70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,6c,00,6e,00,6b,00,00,00,1c,00,00,\
-  00,00,00,00,00,7a,00,00,00,02,00,00,00,6c,00,32,00,67,01,00,00,33,56,2c,68,\
-  20,00,52,45,43,59,43,4c,7e,31,2e,4c,4e,4b,00,00,50,00,09,00,04,00,ef,be,34,\
-  56,fd,5a,34,56,fd,5a,2e,00,00,00,49,58,06,00,00,00,2a,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00,00,00,18,29,b3,00,52,00,65,00,63,00,79,00,63,00,6c,00,65,\
-  00,20,00,42,00,69,00,6e,00,2e,00,6c,00,6e,00,6b,00,00,00,1c,00,00,00,00,00,\
-  00,00,bf,00,00,00,40,07,00,00,00,00,00,00,36,00,00,00,00,00,00,00,00,00,00,\
-  00,36,00,00,00,00,00,00,00,01,00,00,00,01,00,00,00,aa,4f,28,68,48,6a,d0,11,\
-  8c,78,00,c0,4f,d9,18,b4,65,05,00,00,40,0d,00,00,00,00,00,00,32,00,00,00,00,\
-  00,00,00,00,00,00,00,32,00,00,00,00,00,00,00,01,00,00,00
 
+; OTHER
 ; Add Hack Bold font
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts]
 "Hack NFM"="hack.ttf"
-
-; Disable SmartScreen
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
-"EnableSmartScreen"=dword:00000000
-
