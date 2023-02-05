@@ -1,3 +1,9 @@
+# v1.0.1
+## Changes
+1. Separate personal and common settings
+2. Sort to category registry tweaks
+3. Combine scripts into one.
+
 # v1.0.0
 ## Changes
 1. _AppSetup. Add WinRAR activation
