@@ -1,0 +1,310 @@
+Windows Registry Editor Version 5.00
+
+
+; DATA FORMATS
+[HKEY_CURRENT_USER\Control Panel\International]
+"sLongDate"="d MMMM, yyyy"
+"sShortDate"="dd.MM.yy"
+"sTime"=":"
+"sTimeFormat"="HH:mm:ss"
+"sShortTime"="HH:mm"
+"iFirstDayOfWeek"="0"
+
+; Set timzone UTC +2 Kyiv
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+"Bias"=dword:ffffffc4
+"DaylightBias"=dword:ffffffc4
+"DaylightName"="@tzres.dll,-291"
+"DaylightStart"=hex:00,00,03,00,05,00,02,00,00,00,00,00,00,00,00,00
+"StandardBias"=dword:00000000
+"StandardName"="@tzres.dll,-292"
+"StandardStart"=hex:00,00,0a,00,05,00,03,00,00,00,00,00,00,00,00,00
+"TimeZoneKeyName"="Central European Standard Time"
+"DynamicDaylightTimeDisabled"=dword:00000000
+"ActiveTimeBias"=dword:ffffffc4
+
+
+
+
+; TASKBAR
+; Enable toolbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop]
+"TaskbarWinXP"=hex:0c,00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,21,bf,5c,0e,\
+  5f,d1,d0,11,83,01,00,aa,00,5b,43,83,22,00,1c,00,0a,11,00,00,ff,ff,ff,ff,02,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,4c,00,00,00,01,14,02,00,00,00,\
+  00,00,c0,00,00,00,00,00,00,46,81,01,00,00,11,00,00,00,3e,8b,f2,db,8f,66,d9,\
+  01,84,95,c0,a1,a1,67,d9,01,9a,d4,8d,33,91,66,d9,01,00,00,00,00,00,00,00,00,\
+  01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,fc,00,3a,00,1f,44,47,1a,03,\
+  59,72,3f,a7,44,89,c5,55,95,fe,6b,30,ee,26,00,01,00,26,00,ef,be,10,00,00,00,\
+  84,a1,f1,da,8f,66,d9,01,39,19,8b,13,a1,67,d9,01,28,58,b7,a1,a1,67,d9,01,14,\
+  00,20,00,00,00,1a,00,ee,bb,fe,23,00,00,10,00,61,f7,77,17,ad,68,8a,4d,87,bd,\
+  30,b7,59,fa,33,dd,00,00,a0,00,31,00,00,00,00,00,84,56,61,08,11,00,4c,69,6e,\
+  6b,73,00,8c,00,09,00,04,00,ef,be,84,56,ad,06,85,56,48,47,2e,00,00,00,72,97,\
+  01,00,00,00,01,00,00,00,00,00,00,00,00,00,3a,00,00,00,00,00,66,52,df,00,4c,\
+  00,69,00,6e,00,6b,00,73,00,00,00,40,00,43,00,3a,00,5c,00,57,00,69,00,6e,00,\
+  64,00,6f,00,77,00,73,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,\
+  00,5c,00,69,00,65,00,66,00,72,00,61,00,6d,00,65,00,2e,00,64,00,6c,00,6c,00,\
+  2c,00,2d,00,31,00,32,00,33,00,38,00,35,00,00,00,14,00,00,00,10,00,00,00,05,\
+  00,00,a0,06,00,00,00,5a,00,00,00,1c,00,00,00,0b,00,00,a0,61,f7,77,17,ad,68,\
+  8a,4d,87,bd,30,b7,59,fa,33,dd,5a,00,00,00,60,00,00,00,03,00,00,a0,58,00,00,\
+  00,00,00,00,00,70,63,00,00,00,00,00,00,00,00,00,00,00,00,00,00,34,cb,52,51,\
+  e9,c7,82,47,81,b0,97,80,2c,9f,ea,60,15,77,4c,d0,93,d2,ed,11,8e,90,48,5f,99,\
+  b7,63,da,34,cb,52,51,e9,c7,82,47,81,b0,97,80,2c,9f,ea,60,15,77,4c,d0,93,d2,\
+  ed,11,8e,90,48,5f,99,b7,63,da,ce,00,00,00,09,00,00,a0,89,00,00,00,31,53,50,\
+  53,e2,8a,58,46,bc,4c,38,43,bb,fc,13,93,26,98,6d,ce,6d,00,00,00,04,00,00,00,\
+  00,1f,00,00,00,2e,00,00,00,53,00,2d,00,31,00,2d,00,35,00,2d,00,32,00,31,00,\
+  2d,00,33,00,36,00,37,00,33,00,31,00,30,00,30,00,30,00,35,00,33,00,2d,00,32,\
+  00,31,00,39,00,37,00,34,00,33,00,33,00,30,00,38,00,37,00,2d,00,34,00,31,00,\
+  37,00,39,00,35,00,32,00,39,00,32,00,33,00,31,00,2d,00,35,00,30,00,30,00,00,\
+  00,00,00,00,00,39,00,00,00,31,53,50,53,b1,16,6d,44,ad,8d,70,48,a7,48,40,2e,\
+  a4,3d,78,8c,1d,00,00,00,68,00,00,00,00,48,00,00,00,65,fa,8c,65,7e,bb,ac,47,\
+  a0,ed,dd,47,92,a6,8f,5f,00,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,02,\
+  00,00,00,ee,00,00,00,01,00,00,00,02,00,00,00,68,00,00,00,00,00,00,00,5a,00,\
+  32,00,0b,06,00,00,85,56,b2,48,20,00,42,49,4f,53,2e,6c,6e,6b,00,00,42,00,09,\
+  00,04,00,ef,be,84,56,61,08,85,56,b2,48,2e,00,00,00,45,04,00,00,00,00,09,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,3a,6a,27,00,42,00,49,00,4f,00,53,\
+  00,2e,00,6c,00,6e,00,6b,00,00,00,18,00,00,00,00,00,00,00,7a,00,00,00,01,00,\
+  00,00,6c,00,32,00,67,01,00,00,84,56,60,6c,20,00,52,45,43,59,43,4c,7e,31,2e,\
+  4c,4e,4b,00,00,50,00,09,00,04,00,ef,be,84,56,61,08,85,56,90,4b,2e,00,00,00,\
+  46,04,00,00,00,00,09,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,62,12,d8,\
+  00,52,00,65,00,63,00,79,00,63,00,6c,00,65,00,20,00,42,00,69,00,6e,00,2e,00,\
+  6c,00,6e,00,6b,00,00,00,1c,00,00,00,00,00,00,00,79,00,00,00,40,07,00,00,00,\
+  00,00,00,36,00,00,00,00,00,00,00,00,00,00,00,36,00,00,00,00,00,00,00,01,00,\
+  00,00,01,00,00,00,aa,4f,28,68,48,6a,d0,11,8c,78,00,c0,4f,d9,18,b4,9c,05,00,\
+  00,40,0d,00,00,00,00,00,00,32,00,00,00,00,00,00,00,00,00,00,00,32,00,00,00,\
+  00,00,00,00,01,00,00,00
+
+; Never combine window
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarGlomLevel"=dword:00000002
+
+;Taskbar settings for multioly display
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MMTaskbarMode"=dword:00000002
+"MMTaskbarGlomLevel"=dword:00000002
+
+
+; Add seconds in taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSecondsInSystemClock"=dword:00000001
+
+; Remove search from taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"SearchboxTaskbarMode"=dword:00000000
+
+; Show all taskbar icons
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000000
+
+
+
+
+; EXPLORER
+;Change Windows default folders location
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]
+"Personal"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,44,00,72,00,69,00,\
+  76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,00,4f,00,52,00,00,00
+"{374DE290-123F-4565-9164-39C4925E467B}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+"{F42EE2D3-909F-4907-8871-4C22FC0BF756}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,4d,00,59,00,43,\
+  00,4f,00,52,00,00,00
+"{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}"=hex(2):25,00,53,00,79,00,73,00,74,00,\
+  65,00,6d,00,44,00,72,00,69,00,76,00,65,00,25,00,5c,00,21,00,44,00,4f,00,57,\
+  00,4e,00,4c,00,4f,00,41,00,44,00,53,00,00,00
+
+;Enable preview pane
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\DetailsContainer]
+"DetailsContainer"=hex:02,00,00,00,01,00,00,00
+
+
+
+
+; PERSONALIZATION
+; Background - solid color: black
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WallPaper"=""
+
+[HKEY_CURRENT_USER\Control Panel\Colors]
+"Background"="0 0 0"
+
+; Remove This PC from desktop
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
+
+; Remove Recycle bin from desktop
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000001
+
+
+
+
+
+;KEYBOARD
+; Alt tab open windows only
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MultiTaskingAltTabFilter"=dword:00000003
+
+;Change CAPSLOCK to switch layout
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"="4"
+"Hotkey"="4"
+"Layout Hotkey"="2"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,29,00,3a,00,3a,00,46,00,56,00,29,00,00,00,00,00
+
+;Enable NumLock
+[HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="2"
+
+
+
+
+; ADVANCED SYSTEM SETTINGS
+;Set custom enviroment variable for user
+[HKEY_CURRENT_USER\Environment]
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+;Set custom enviroment variable for system
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"TEMP"="C:\\TEMP"
+"TMP"="C:\\TEMP"
+
+
+
+;APP SETUP
+;Telegram
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg_auto_file\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg]
+"URL Protocol"=""
+@="URL:Telegram Link"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\DefaultIcon]
+@="\"K:\\Telegram\\Telegram.exe,1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\tg\shell\open\command]
+@="\"K:\\Telegram\\Telegram.exe\" -workdir \"K:/Telegram/\" -- \"%1\""
+
+; OTHER
+; Add Hack Bold font
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts]
+"FiraCode NFM"="fira.ttf"
+
+; Default Apps
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell\open\command]
+@="\"C:\\PortableApps\\foobar2000\\foobar2000.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe\shell\open\command]
+@="\"C:\\PortableApps\\FSViewer\\FSViewer.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeCalcPortable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeCalcPortable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeCalcPortable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeCalcPortable.exe\shell\open\command]
+@="\"C:\\PortableApps\\LibreOfficePortable\\LibreOfficeCalcPortable.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeDrawPortable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeDrawPortable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeDrawPortable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeDrawPortable.exe\shell\open\command]
+@="\"C:\\PortableApps\\LibreOfficePortable\\LibreOfficeDrawPortable.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeWriterPortable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeWriterPortable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeWriterPortable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreOfficeWriterPortable.exe\shell\open\command]
+@="\"C:\\PortableApps\\LibreOfficePortable\\LibreOfficeWriterPortable.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\Notepad++Portable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\Notepad++Portable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\Notepad++Portable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\Notepad++Portable.exe\shell\open\command]
+@="\"C:\\PortableApps\\Notepad++Portable\\Notepad++Portable.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\okular.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\okular.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\okular.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\okular.exe\shell\open\command]
+@="\"C:\\PortableApps\\Okular\\bin\\okular.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell\open\command]
+@="\"C:\\PortableApps\\qBittorrentPortable\\qBittorrentPortable.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell\open\command]
+@="\"C:\\BATCH\\runemacs.bat\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\SumatraPDF.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\SumatraPDF.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\SumatraPDF.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\SumatraPDF.exe\shell\open\command]
+@="\"C:\\PortableApps\\SumatraPDF\\SumatraPDF.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\VLCPortable.exe]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\VLCPortable.exe\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\VLCPortable.exe\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\VLCPortable.exe\shell\open\command]
+@="\"C:\\PortableApps\\VLCPortable\\VLCPortable.exe\" \"%1\""
