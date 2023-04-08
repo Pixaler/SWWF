@@ -53,13 +53,13 @@ Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
-Write-Host ----------------------------IMPORTING PERSONAL REGISTRY TWEAKS----------------------------
+Write-Host ----------------------------IMPORTING PERSONAL REGISTRY TWEAKS-------------------
 Write-Host ---------------------------------------------------------------------------------
 regedit.exe /s "C:\Files\PersonalRegistry.reg"
-.\RPC.cmd
+C:\Files\RPC.cmd
 Write-Host .
 Write-Host .
-Start-Sleep -Seconds 15
+Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
 Write-Host ---------------------------------------------------------------------------------
@@ -80,7 +80,7 @@ Stop-Process -name setup -force
 C:\Files\Packages\ruscaps\setup.exe 
 Start-Sleep -Seconds 5
 Stop-Process -name setup -force
-C:\\Files\Packages\ukrcaps\setup.exe 
+C:\Files\Packages\ukrcaps\setup.exe 
 Start-Sleep -Seconds 5
 Stop-Process -name setup -force
 Write-Host .

@@ -1,3 +1,16 @@
+# v1.1.1
+
+## Changes
+
+1. Add more information about progress of each step
+2. Add step that disable Windows Defeder
+3. Add administration rights check
+4. Files deletes in the end of script
+
+## Fixes
+
+1. Remove some mistakes in PersonalSetup.ps1
+
 # v1.1.0
 
 ## Changes
