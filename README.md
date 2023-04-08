@@ -4,7 +4,7 @@ Script that setup Windows 10 to my personal prefrences. Tested on Windows 10 LTS
 
 Main setup take from Izzy Laif "Настраиваю Windows 10 часов". Link: https://www.youtube.com/watch?v=ATJbkPDLOVE&t=3s
 
-Setup for perfomance and script takes from: Windows LTSC 2021 Optimization, Fr33thy. Link: https://www.youtube.com/watch?v=1ZiI3ZQcYt4
+Setup for perfomance and script takes from: Windows 10 & 11 TURBO Optimization, Fr33thy. Link: https://www.youtube.com/watch?v=Q1zLtq491ZE&t=673s
 
 ## Installation
 
