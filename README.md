@@ -1,13 +1,23 @@
 # SWWF (Setup Windows without f@#k) 
 
-Script that setup Windows 10 to my personal prefrences. Tested on Windows 10 LTSC 1809, Windows 10 LTSC 21H2, Windows 10 Pro 21H2, Windows 11 Pro 21H2
+Script that setup Windows 10 to my personal prefrences. 
 
-Main setup take from Izzy Laif "Настраиваю Windows 10 часов". Link: https://www.youtube.com/watch?v=ATJbkPDLOVE&t=3s
-
-Setup for perfomance and script takes from: Windows 10 & 11 TURBO Optimization, Fr33thy. Link: https://www.youtube.com/watch?v=Q1zLtq491ZE&t=673s
+## Works on: 
+- Windows 10 LTSC 
+- Windows 10 Pro 
+- Windows 11 Pro
 
 ## Installation
 
-Just put everything from repository to C drive and run _PostInstall.cmd as a **Administrator**
+Just put everything from repository to C drive and
 
-Preferable use with Izzy Laif setup of portable programs.
+## Launch
+
+**Recommended:** Run PostInstall.cmd as an Administrator
+
+If you want to set settings in PersonalSetup.ps1 launch with "y" argument. It is installs some preferences for my portable apps, so you **do not need** to use it.
+## Links
+
+Main setup took from Izzy Laif "Настраиваю Windows 10 часов". Link: https://www.youtube.com/watch?v=ATJbkPDLOVE&t=3s
+
+Setup for perfomance and scripts took from: Windows 10 & 11 TURBO Optimization, Fr33thy. Link: https://www.youtube.com/watch?v=Q1zLtq491ZE&t=673s
