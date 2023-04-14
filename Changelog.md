@@ -1,3 +1,15 @@
+# 1.2.0
+
+## Changes
+
+1. Update registry in personal setup
+2. Now script doesn't ask for PersonalSetup.ps1 launch. To activate it, you need to launch script with 'y' args.
+3. Remove AMD Setting Optimization
+
+## Fixes
+
+1. Increase time for Debloat.ps1.
+
 # v1.1.1
 
 ## Changes

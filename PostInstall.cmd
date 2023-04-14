@@ -13,7 +13,6 @@ timeout 2 >nul
 "C:\Files\Packages\.NET\NET.exe" /install /quiet /norestart
 timeout 2 >nul
 del "C:\Users\Public\Desktop\Microsoft Edge.lnk"
-pause
 @echo ----------------------------------------------------------------------------------Installing Optimizations
 @echo      -----Importing registry-----
 regedit.exe /s "C:\Files\Registry.reg"
@@ -26,15 +25,11 @@ timeout 2 >nul
 timeout 2 >nul
 @echo      -----Remove bloat-----
 start powershell -windowstyle hidden "& ""C:\Files\Debloat.ps1"""
-timeout 80 >nul
+timeout 120 >nul
 @echo      -----My preferences-----
-start "" powershell "C:\Files\PostInstall.ps1"
-pause
+start "" powershell "C:\Files\PostInstall.ps1" "%~1"
 @echo ----------------------------------------------------------------------------------Optimize MSI Mode
 "C:\Files\Packages\MSI.exe"
-pause
-@echo ----------------------------------------------------------------------------------Optimize AMD Settings
-"C:\Program Files\AMD\CNext\CNext\RadeonSoftware.exe"
 pause
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
@@ -44,7 +39,6 @@ pause
 pause
 "C:\Files\Packages\7Zip\x64\7za.exe" x "C:\Files\Packages\disable-defender.7z" -oC:\Files\Packages
 "C:\Files\Packages\disable-defender.exe"
-pause
 @echo ----------------------------------------------------------------------------------Cleanup + System Restore Point
 START control.exe sysdm.cpl ,4
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\clean.cmd"

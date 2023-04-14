@@ -24,11 +24,7 @@ Write-Host .
 Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
-Write-Host ---------------------------------------------------------------------------------
-Write-Host -------------------------------SETUP MY SETTINGS---------------------------------
-Write-Host ---------------------------------------------------------------------------------
-Write-Host "Setup my setting? (y/n)"
-$setup_my_apps = Read-Host -Prompt "You options is"
+$setup_my_apps = $args[0]
 if ($setup_my_apps -like 'y') {
     C:\Files\PersonalSetup.ps1
 }

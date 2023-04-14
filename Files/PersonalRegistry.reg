@@ -273,14 +273,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\okular.exe\shell\open\command]
 @="\"C:\\PortableApps\\Okular\\bin\\okular.exe\" \"%1\""
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qbittorrent-portable.exe]
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qbittorrent-portable.exe\shell]
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell\open]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qbittorrent-portable.exe\shell\open]
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qBittorrentPortable.exe\shell\open\command]
-@="\"C:\\PortableApps\\qBittorrentPortable\\qBittorrentPortable.exe\" \"%1\""
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qbittorrent-portable.exe\shell\open\command]
+@="\"C:\\PortableApps\\qbittorrent-portable\\qbittorrent-portable.exe\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat]
 
