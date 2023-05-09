@@ -40,5 +40,5 @@ Get-WindowsPackage -Online | Where PackageName -like *QuickAssist* | Remove-Wind
 Get-ProvisionedAppxPackage -Online | `
 Where-Object { $_.PackageName -match "xbox" } | `
 ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
-C:\Program Files (x86)\Microsoft\Edge\Application\9*\Installer\setup.exe --uninstall --force-uninstall --system-level
-C:\Program Files (x86)\Microsoft\Edge\Application\10*\Installer\setup.exe --uninstall --force-uninstall --system-level
+C:\"Program Files (x86)"\Microsoft\Edge\Application\9*\Installer\setup.exe --uninstall --force-uninstall --system-level
+C:\"Program Files (x86)"\Microsoft\Edge\Application\10*\Installer\setup.exe --uninstall --force-uninstall --system-level
