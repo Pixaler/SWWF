@@ -3,6 +3,7 @@
 3. Reboot system
 4. Copy script to C:\
 5. Run script
+
 **If store installed**
  - Microsoft Store - Update apps
  - Disable automatic update
