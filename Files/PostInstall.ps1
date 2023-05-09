@@ -24,6 +24,16 @@ Write-Host .
 Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
+Write-Host ---------------------------------------------------------------------------------
+Write-Host ----------------------------DISABLING NETWORK DISCOVERY--------------------------
+Write-Host ---------------------------------------------------------------------------------
+netsh advfirewall firewall set rule group="Network Discovery" new enable=No
+netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
 $setup_my_apps = $args[0]
 if ($setup_my_apps -like 'y') {
     C:\Files\PersonalSetup.ps1
