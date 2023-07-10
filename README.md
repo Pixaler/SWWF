@@ -9,7 +9,7 @@ Script that setup Windows 10 to my personal prefrences.
 
 ## Installation
 
-Just put everything from repository to C drive and
+Just put all files from archive to C drive and run as administrator
 
 ## Launch
 
