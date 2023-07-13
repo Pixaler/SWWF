@@ -1,3 +1,13 @@
+# v1.2.1
+
+## Changes
+1. Disable Network Discovery and Sharing
+2. Update Microsoft Edge path to remove
+
+## Fixes
+1. Fix removing arrow from shortcuts
+
+
 # 1.2.0
 
 ## Changes
