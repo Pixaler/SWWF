@@ -11,6 +11,7 @@ Get-AppxPackage -allusers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.MicrosoftSolitaireCollection | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.MixedReality.Portal | Remove-AppxPackage
+Get-AppxPackage -AllUsers | where {$_.Name -like "*outlook*"} | Remove-AppxPackage -AllUsers
 Get-AppxPackage -allusers Microsoft.Office.OneNote | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.OneDriveSync | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.People | Remove-AppxPackage
