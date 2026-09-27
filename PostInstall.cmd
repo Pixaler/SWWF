@@ -74,10 +74,10 @@ timeout 2 >nul
 timeout 2 >nul
 @echo      -----Remove bloat-----
 start powershell  "C:\Files\Debloat.ps1"
-timeout 2 >nul
+timeout 40 >nul
 @echo      -----My preferences-----
 start "" powershell "C:\Files\PostInstall.ps1" "%~1"
-del "C:\Users\Public\Desktop\Microsoft Edge.lnk"
+del "C:\Users\%USERNAME%\Desktop\Microsoft Edge.lnk"
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
 pause
