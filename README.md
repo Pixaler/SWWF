@@ -1,11 +1,14 @@
 # SWWF (Setup Windows without f@#k) 
 
-Script that setup Windows 10 to my personal prefrences. 
+Script that setup Windows 11 to my personal prefrences. 
 
 ## Works on: 
+- Windows 11 LTSC
+- Windows 11 Pro
+## Also may works on:
+But since Windows 10 will stop receiving updates very soon, I'll only be testing on Windows 11
 - Windows 10 LTSC 
 - Windows 10 Pro 
-- Windows 11 Pro
 
 ## Installation
 
@@ -19,5 +22,4 @@ If you want to set settings in PersonalSetup.ps1 launch with "y" argument. It is
 ## Links
 
 Main setup took from Izzy Laif "Настраиваю Windows 10 часов". Link: https://www.youtube.com/watch?v=ATJbkPDLOVE&t=3s
-
 Setup for perfomance and scripts took from: Windows 10 & 11 TURBO Optimization, Fr33thy. Link: https://www.youtube.com/watch?v=Q1zLtq491ZE&t=673s
