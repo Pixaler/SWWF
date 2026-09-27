@@ -81,8 +81,10 @@ del "C:\Users\Public\Desktop\Microsoft Edge.lnk"
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
 pause
-@echo ----------------------------------------------------------------------------------Cleanup + System Restore Point
+@echo ----------------------------------------------------------------------------------System Restore Point
 START control.exe sysdm.cpl ,4
+pause
+@echo ----------------------------------------------------------------------------------Clean Up
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\clean.cmd"
 pause
 @echo ----------------------------------------------------------------------------------Restart PC
