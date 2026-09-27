@@ -7,7 +7,7 @@ call :IsAdmin
 "C:\Files\Packages\DirectX\DXSETUP.exe" /silent
 timeout 2 >nul
 @echo      -----Installing C++ Redist-----
-"C:\Files\Packages\C++.exe" /S
+"C:\Files\Packages\Cpp\install_all.bat" /S
 timeout 2 >nul
 @echo      -----Installing .NET 6 Framework-----
 "C:\Files\Packages\.NET\NET.exe" /install /quiet /norestart
