@@ -77,6 +77,7 @@ start powershell  "C:\Files\Debloat.ps1"
 timeout 2 >nul
 @echo      -----My preferences-----
 start "" powershell "C:\Files\PostInstall.ps1" "%~1"
+del "C:\Users\Public\Desktop\Microsoft Edge.lnk"
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
 pause
