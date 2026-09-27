@@ -15,50 +15,50 @@ if "%PROCESSOR_ARCHITECTURE%"=="ARM64" set IS_X64=1
 if "%IS_X64%" == "1" goto X64
 
 echo 2005...
-"C:\Files\Packages\Cpp\vcredist2005_x86.exe" /q
+"C:\Files\Packages\Cpp\vcredist2005_x86.exe" /q /r:n
 
 echo 2008...
-"C:\Files\Packages\Cpp\vcredist2008_x86.exe" /qb
+"C:\Files\Packages\Cpp\vcredist2008_x86.exe" /queit /norestart
 
 echo 2010...
-"C:\Files\Packages\Cpp\vcredist2010_x86.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2010_x86.exe" /quiet /norestart
 
 echo 2012...
-"C:\Files\Packages\Cpp\vcredist2012_x86.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2012_x86.exe" /quiet /norestart
 
 echo 2013...
-"C:\Files\Packages\Cpp\vcredist2013_x86.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2013_x86.exe" /quiet /norestart
 
 echo v14 (2015-2026
-"C:\Files\Packages\Cpp\vcredist_v14.x86.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist_v14.x86.exe" /quiet /norestart
 
 goto END
 
 :X64
 
 echo 2005...
-"C:\Files\Packages\Cpp\vcredist2005_x86.exe" /q
-"C:\Files\Packages\Cpp\vcredist2005_x64.exe" /q
+"C:\Files\Packages\Cpp\vcredist2005_x86.exe" /q /r:n
+"C:\Files\Packages\Cpp\vcredist2005_x64.exe" /q /r:n
 
 echo 2008...
-"C:\Files\Packages\Cpp\vcredist2008_x86.exe" /qb
-"C:\Files\Packages\Cpp\vcredist2008_x64.exe" /qb
+"C:\Files\Packages\Cpp\vcredist2008_x86.exe" /quiet /norestart
+"C:\Files\Packages\Cpp\vcredist2008_x64.exe" /quiet /noretart
 
 echo 2010...
-"C:\Files\Packages\Cpp\vcredist2010_x86.exe" /passive /norestart
-"C:\Files\Packages\Cpp\vcredist2010_x64.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2010_x86.exe" /quiet /norestart
+"C:\Files\Packages\Cpp\vcredist2010_x64.exe" /quiet /norestart
 
 echo 2012...
-"C:\Files\Packages\Cpp\vcredist2012_x86.exe" /passive /norestart
-"C:\Files\Packages\Cpp\vcredist2012_x64.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2012_x86.exe" /quiet /norestart
+"C:\Files\Packages\Cpp\vcredist2012_x64.exe" /quiet /norestart
 
 echo 2013...
-"C:\Files\Packages\Cpp\vcredist2013_x86.exe" /passive /norestart
-"C:\Files\Packages\Cpp\vcredist2013_x64.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist2013_x86.exe" /quiet /norestart
+"C:\Files\Packages\Cpp\vcredist2013_x64.exe" /quiet /norestart
 
 echo v14 (2015-2026) ...
-"C:\Files\Packages\Cpp\vcredist_v14.x86.exe" /passive /norestart
-"C:\Files\Packages\Cpp\vcredist_v14.x64.exe" /passive /norestart
+"C:\Files\Packages\Cpp\vcredist_v14.x86.exe" /quiet /norestart
+"C:\Files\Packages\Cpp\vcredist_v14.x64.exe" /quiet /norestart
 
 :END
 timeout 2 >nul
@@ -73,11 +73,12 @@ timeout 2 >nul
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\Power.cmd"
 timeout 2 >nul
 @echo      -----Remove bloat-----
-start powershell  "C:\Files\Debloat.ps1"
-timeout 40 >nul
+start /wait "" powershell  "C:\Files\Debloat.ps1"
+timeout 2 >nul
 @echo      -----My preferences-----
-start "" powershell "C:\Files\PostInstall.ps1" "%~1"
+start /wait "" powershell "C:\Files\PostInstall.ps1" "%~1"
 del "C:\Users\%USERNAME%\Desktop\Microsoft Edge.lnk"
+timeout 2 >nul
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
 pause
