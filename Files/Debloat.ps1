@@ -1,8 +1,7 @@
 Get-AppxPackage -allusers Clipchamp.Clipchamp | Remove-AppxPackage
 Get-AppxPackage -allusers Disney.37853FC22B2CE | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
-Get-AppxPackage -allusers Microsoft.BingNews | Remove-AppxPackage
-Get-AppxPackage -allusers Microsoft.BingWeather | Remove-AppxPackage
+Get-AppxPackage -allusers *Bing* | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.GetHelp | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.Getstarted | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.MSPaint | Remove-AppxPackage
@@ -31,13 +30,17 @@ Get-AppxPackage -allusers Microsoft.ZuneMusic | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.ZuneVideo | Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftCorporationII.QuickAssist | Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftTeams | Remove-AppxPackage
+Get-AppxPackage -allusers MSTeams | Remove-AppxPackage
 Get-AppxPackage -allusers MicrosoftWindows.Client.WebExperience | Remove-AppxPackage
 Get-AppxPackage -allusers SpotifyAB.SpotifyMusic | Remove-AppxPackage
 Get-AppxPackage -allusers Microsoft.WindowsCommunicationsApps | Remove-AppxPackage
 Get-WindowsPackage -Online | Where PackageName -like *Hello-Face* | Remove-WindowsPackage -Online -NoRestart
 Get-WindowsPackage -Online | Where PackageName -like *QuickAssist* | Remove-WindowsPackage -Online -NoRestart
-Get-ProvisionedAppxPackage -Online | `
-Where-Object { $_.PackageName -match "xbox" } | `
+Get-AppxPackage -allusers *xbox* | Remove-AppxPackage
+Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -like "*xbox*" -or $_.DisplayName -like "*gaming*" }  | Remove-AppxProvisionedPackage -Online
+taskkill /f /im OneDrive.exe
+Stop-Service -Name "OneDrive Updater Service" -Force -ErrorAction SilentlyContinue
+& (Get-Item "$env:localappdata\Microsoft\OneDrive\*\OneDriveSetup.exe" | Select-Object -First 1).FullName /uninstall
 
 Write-Host "Uninstalling: Edge . . ."
 # stop edge running
