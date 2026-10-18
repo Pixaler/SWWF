@@ -3,8 +3,8 @@
 Script that setup Windows 11 to my personal prefrences. 
 
 ## Works on: 
-- Windows 11 LTSC
-- Windows 11 Pro
+- Windows 11 24(25)H2 LTSC
+- Windows 11 26H2 Pro
 ### Also may works on:
 But since Windows 10 will stop receiving updates very soon, I'll only be testing on Windows 11
 - Windows 10 LTSC 
