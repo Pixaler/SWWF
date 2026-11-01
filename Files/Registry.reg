@@ -471,6 +471,18 @@ Windows Registry Editor Version 5.00
 
 ; GAMING
 ; Disable game bar
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR]
+"Value"=dword:00000000
+
+[HKLM\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_CURRENT_ROOT\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+
 [HKEY_CURRENT_USER\System\GameConfigStore]
 "GameDVR_Enabled"=dword:00000000
 
