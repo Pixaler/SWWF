@@ -51,7 +51,6 @@ Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false } | ForEach-Object {
 taskkill /f /im OneDrive.exe
 Stop-Service -Name "OneDrive Updater Service" -Force -ErrorAction SilentlyContinue
 & (Get-Item "$env:localappdata\Microsoft\OneDrive\*\OneDriveSetup.exe" | Select-Object -First 1).FullName /uninstall
-# uninstall copilot
 
 Write-Host "Uninstalling: Edge . . ."
 # stop edge running

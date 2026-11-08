@@ -64,10 +64,8 @@ echo v14 (2015-2026) ...
 timeout 2 >nul
 @echo ----------------------------------------------------------------------------------Installing Optimizations
 @echo      -----Importing registry-----
+xcopy /s "c:\Files\Packages\Blank.ico" "C:\Windows"
 regedit.exe /s "C:\Files\Registry.reg"
-timeout 2 >nul
-@echo      -----Restart explorer-----
-"C:\Files\Packages\Power.exe" /SW:0 "C:\Files\RPC.cmd"
 timeout 2 >nul
 @echo      -----Importing powerplan-----
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\Power.cmd"
@@ -75,9 +73,20 @@ timeout 2 >nul
 @echo      -----Remove bloat-----
 start /wait "" powershell  "C:\Files\Debloat.ps1"
 timeout 2 >nul
+@echo      -----Edit Swap-----
+start /wait "" powershell  "C:\Files\EditSwap.ps1"
+timeout 2 >nul
 @echo      -----My preferences-----
-start /wait "" powershell "C:\Files\PostInstall.ps1" "%~1"
-del "C:\Users\%USERNAME%\Desktop\Microsoft Edge.lnk"
+set /p input= Type any input: 
+
+if %input%==y ( 
+  start /wait "" powershell "C:\Files\PostInstall.ps1"
+) else (
+  echo Skip...
+)
+timeout 2 >nul
+@echo      -----Restart explorer-----
+"C:\Files\Packages\Power.exe" /SW:0 "C:\Files\RPC.cmd"
 timeout 2 >nul
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
@@ -87,12 +96,13 @@ START control.exe sysdm.cpl ,4
 pause
 @echo ----------------------------------------------------------------------------------Clean Up
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\clean.cmd"
+rmdir /q /s "%SystemDrive%\Windows.old" "%SystemDrive%\PerfLogs" "%SystemDrive%\inetpub"
 pause
 @echo ----------------------------------------------------------------------------------Restart PC
 pause
 rmdir /s /q C:\Files
 C:\Windows\System32\shutdown.exe /r /t 10
-del /s /q "C:\PostInstall.cmd"
+del /s /q "C:\PostInstall.bat"
 
 :IsAdmin
 Reg.exe query "HKU\S-1-5-19\Environment"

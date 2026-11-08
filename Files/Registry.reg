@@ -104,6 +104,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "Start_TrackDocs"=dword:00000000 
 
+;View: List and remove pinned apps
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"ShowPinnedSection"=dword:00000000
+"AllAppsViewMode"=dword:00000002
+
 
 
 
