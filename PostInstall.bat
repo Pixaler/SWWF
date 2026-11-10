@@ -88,6 +88,9 @@ timeout 2 >nul
 @echo      -----Restart explorer-----
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\RPC.cmd"
 timeout 2 >nul
+@echo ----------------------------------------------------------------------------------Optimize Display Settings
+rundll32.exe display.dll, ShowAdapterSettings
+pause
 @echo ----------------------------------------------------------------------------------Optimize Sound Settings
 mmsys.cpl
 pause
@@ -96,7 +99,7 @@ START control.exe sysdm.cpl ,4
 pause
 @echo ----------------------------------------------------------------------------------Clean Up
 "C:\Files\Packages\Power.exe" /SW:0 "C:\Files\clean.cmd"
-rmdir /q /s "%SystemDrive%\Windows.old" "%SystemDrive%\PerfLogs" "%SystemDrive%\inetpub"
+rmdir /q /s "%SystemDrive%\Windows.old" "%SystemDrive%\PerfLogs" "%SystemDrive%\inetpub" "%SystemDrive%\Intel" "%SystemDrive%\AMD"
 pause
 @echo ----------------------------------------------------------------------------------Restart PC
 pause
