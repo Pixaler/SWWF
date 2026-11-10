@@ -25,6 +25,15 @@ Windows Registry Editor Version 5.00
 
 
 
+; DISPLAY
+; Enable HDR
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX]
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\GraphicsSettings]
+"AutoHDROptOutApplicable"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences]
+"DirectXUserGlobalSettings"="SwapEffectUpgradeEnable=1;AutoHDREnable=1;"
 
 ; TASKBAR
 ; Enable toolbar
@@ -204,17 +213,6 @@ Windows Registry Editor Version 5.00
 "FiraCode NFM"="fira.ttf"
 
 ; Default Apps
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell\open]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\foobar2000.exe\shell\open\command]
-@="\"C:\\PortableApps\\foobar2000\\foobar2000.exe\" \"%1\""
-
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\FSViewer.exe\shell]
@@ -277,15 +275,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\qbittorrent-portable.exe\shell\open\command]
 @="\"C:\\PortableApps\\qbittorrent-portable\\qbittorrent-portable.exe\" \"%1\""
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell\open]
-
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\runemacs.bat\shell\open\command]
-@="\"C:\\BATCH\\runemacs.bat\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\SumatraPDF.exe]
 
