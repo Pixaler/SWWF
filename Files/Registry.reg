@@ -868,6 +868,11 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 
 ;WINDOWS UPDATES
+; Disable Auto Update
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AU]
+"NoAutoUpdate"=dword:00000001
+
+
 ; Disable driver searching
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
 "SearchOrderConfig"=dword:00000000
