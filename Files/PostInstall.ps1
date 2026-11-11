@@ -128,5 +128,14 @@ Write-Host .
 Start-Sleep -Seconds 2
 Write-Host .
 Write-Host .
+Write-Host ---------------------------------------------------------------------------------
+Write-Host -------------------------------CODING SETUP--------------------------------------
+Write-Host ---------------------------------------------------------------------------------
+C:\Files\CodingSetup.ps1
+Write-Host .
+Write-Host .
+Start-Sleep -Seconds 2
+Write-Host .
+Write-Host .
 Exit
 
