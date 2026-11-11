@@ -1,3 +1,4 @@
 Packages/
 /!output
 Files/PostInstall.ps1
+Files/CodingSetup.ps1
